@@ -1,16 +1,16 @@
 /*
- * bootstrap-filestyle
- * http://markusslima.github.com/bootstrap-filestyle/
+ * jquery-filestyle
+ * http://dev.tudosobreweb.com.br/jquery-filestyle/
  *
  * Copyright (c) 2013 Markus Vinicius da Silva Lima
- * Version 1.0.0
+ * Version 0.1.0
  * Licensed under the MIT license.
  */
 
-!function ($) {
+(function ($) {
     "use strict";
 
-    var Filestyle = function (element, options) {
+    var jFilestyle = function (element, options) {
         this.options = options;
         this.$elementFilestyle = [];
         this.$element = $(element);
@@ -25,7 +25,7 @@
         destroy: function () {
             this.$element.removeAttr('style');
             this.$elementFilestyle.remove();
-            this.$element.removeData('filestyle');
+            this.$element.removeData('jfilestyle');
         },
 
         setButtonText: function (text) {
@@ -94,7 +94,7 @@
         constructor: function () {
             var _self = this;
 
-            var $filestyle = '',
+            var $jfilestyle = '',
                 html = '',
                 files = [],
                 content = '';
@@ -108,7 +108,7 @@
 
             this.$elementFilestyle = $('<div>'+html+'</div>');
 
-            // hidding input file and add filestyle
+            // hidding input file and add jfilestyle
             this.$element
                 .css({'position':'fixed','top':'-500px','left':'-500px'})
                 .after(this.$elementFilestyle);
@@ -131,14 +131,14 @@
         }
     };
 
-    $.fn.filestyle = function (option, value) {
+    $.fn.jfilestyle = function (option, value) {
         return this.each(function () {
             var $this = $(this)
-              , data = $this.data('filestyle')
-              , options = $.extend({}, $.fn.filestyle.defaults, $this.data(), typeof option == 'object' && option);
+              , data = $this.data('jfilestyle')
+              , options = $.extend({}, $.fn.jfilestyle.defaults, $this.data(), typeof option == 'object' && option);
             
             if (!data) {
-                $this.data('filestyle', (data = new Filestyle(this, options)));
+                $this.data('jfilestyle', (data = new jFilestyle(this, options)));
                 data.constructor();
             }
 
@@ -146,14 +146,13 @@
         });
     };
 
-    $.fn.filestyle.defaults = {
+    $.fn.jfilestyle.defaults = {
         buttonText: 'Choose file',
         input: true,
         icon: true,
-        bootstrap: false,
         classButton: '',
         classInput: '',
         classIcon: ''
     };
 
-}(window.jQuery);
+})(window.jQuery);
