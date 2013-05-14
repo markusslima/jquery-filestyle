@@ -7,23 +7,20 @@ $('#input02').jfilestyle({
 
 $('#input03').jfilestyle({
 	input: false,
-	classButton: 'btn btn-primary'
 });
 
 $('#input04').jfilestyle({
 	icon: false
 });
 
-$('#input05').jfilestyle({
-	classButton: 'btn btn-warning'
-});
+$('#input05').jfilestyle();
 
 $('#input06').jfilestyle({
-	classInput: 'input-small'
+	size: '100px'
 });
 
 $('#input07').jfilestyle({
-	classIcon: 'icon-plus',
+	iconName: 'icon-plus',
 	buttonText: 'Add'
 });
 
