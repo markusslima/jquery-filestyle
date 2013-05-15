@@ -1,42 +1,24 @@
 $('#input01').jfilestyle()
 
-$('#input02').jfilestyle({
-	buttonText: 'My filestyle',
-	theme: 'green'
-});
+$('#input02').jfilestyle({buttonText: 'My filestyle'});
 
-$('#input03').jfilestyle({
-	input: false,
-});
+$('#input03').jfilestyle({input: false });
 
-$('#input04').jfilestyle({
-	icon: false
-});
+$('#input04').jfilestyle({icon: false });
 
-$('#input05').jfilestyle();
+$('#input05').jfilestyle({theme: 'blue'});
 
-$('#input06').jfilestyle({
-	size: '100px'
-});
+$('#input06').jfilestyle({size: '100px'});
 
-$('#input07').jfilestyle({
-	iconName: 'icon-plus',
-	buttonText: 'Add'
-});
+$('#input07').jfilestyle({iconName: 'icon-plus'});
 
-$('#input08').jfilestyle({
-	buttonText: 'File',
-	classButton: 'btn btn-success'
-});
+$('#input08').jfilestyle( );
 
 $('#clear').click(function () {
 	$('#input08').jfilestyle('clear');
 });
 
-$('#input09').jfilestyle({
-	buttonText: 'File',
-	classButton: 'btn btn-primary'
-});
+$('#input09').jfilestyle({theme: 'orange'});
 
 $('#toggleInput').click(function () {
 	var fs = $('#input09');
@@ -46,10 +28,7 @@ $('#toggleInput').click(function () {
 	   	fs.jfilestyle('input', true);
 });
 
-$('#input10').jfilestyle({
-	buttonText: 'File',
-	classButton: 'btn btn-primary'
-});
+$('#input10').jfilestyle({theme: 'green'});
 
 $('#toggleIcon').click(function () {
 	var fs = $('#input10');
@@ -59,12 +38,12 @@ $('#toggleIcon').click(function () {
 	   	fs.jfilestyle('icon', true);
 });
 
-$('#input11').jfilestyle({
-	buttonText: 'Multiple',
-	classButton: 'btn btn-danger'
+$('#input11').jfilestyle();
+$('#input11').jfilestyle('buttonText', '');
+
+$('#input12').jfilestyle({theme: 'red'});
+$('#destroy').click(function () {
+	$('#input12').jfilestyle('destroy');
 });
 
-$('#input12').jfilestyle();
-$('#input12').jfilestyle('buttonText', '');
-
-$('.form-horizontal').eq(1).find(':file').jfilestyle();
+$('.form').find(':file').jfilestyle();

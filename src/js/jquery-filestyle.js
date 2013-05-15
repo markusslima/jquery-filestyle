@@ -3,19 +3,19 @@
  * http://dev.tudosobreweb.com.br/jquery-filestyle/
  *
  * Copyright (c) 2013 Markus Vinicius da Silva Lima
- * Version 0.1
+ * Version 0.1.0
  * Licensed under the MIT license.
  */
 (function ($) {
     "use strict";
     
-    var jFilestyle = function (element, options) {
+    var JFilestyle = function (element, options) {
         this.options = options;
         this.$elementjFilestyle = [];
         this.$element = $(element);
     };
 
-    jFilestyle.prototype = {
+    JFilestyle.prototype = {
         clear: function () {
             this.$element.val('');
             this.$elementjFilestyle.find(':text').val('');
@@ -88,7 +88,7 @@
         iconName: function (value) {
             if (value !== undefined) {
                 this.options.iconName = value;
-                if (this.options.theme.search(/blue|green|red|orange|gray|black/i) !== -1) {
+                if (this.options.theme.search(/blue|green|red|orange|black/i) !== -1) {
                     this.$elementjFilestyle.find('label').find('i').attr({'class': 'icon-white '+this.options.iconName});
                 } else {
                     this.$elementjFilestyle.find('label').find('i').attr({'class': this.options.iconName});
@@ -110,7 +110,7 @@
         htmlIcon: function () {
             if (this.options.icon) {
                 var colorIcon = '';
-                if (this.options.theme.search(/blue|green|red|orange|gray|black/i) !== -1) {
+                if (this.options.theme.search(/blue|green|red|orange|black/i) !== -1) {
                     colorIcon = ' icon-white ';
                 }
 
@@ -149,7 +149,7 @@
 
             // hidding input file and add filestyle
             this.$element
-                .css({'position':'fixed','top':'-500px','left':'-500px'})
+                .css({'position':'fixed','left':'-500px'})
                 .after(this.$elementjFilestyle);
 
             // Getting input file value
@@ -192,7 +192,7 @@
                         options = $.extend({}, $.fn.jfilestyle.defaults, option, typeof option === 'object' && option);
 
                     if (!data) {
-                        $this.data('jfilestyle', (data = new jFilestyle(this, options)));
+                        $this.data('jfilestyle', (data = new JFilestyle(this, options)));
                         data.constructor();
                     }
 
