@@ -1,28 +1,17 @@
-# Filestyle Bootstrap
+# [jQuery Bootstrap v0.1.3](http://dev.tudosobreweb.com.br/jquery-filestyle/)
 
-Customization of input html file for Bootstrap Twitter
+Personalize your input file and let the beautiful.
 
-## Getting Started
+Maintained by [Markus Lima](https://github.com/markusslima) [@markusslima](https://twitter.com/markusslima)
 
-In your web page:
+### Getting Started, Documentation and Examples
+http://dev.tudosobreweb.com.br/jquery-filestyle/
 
-```html
-<head>
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-filestyle.min.js"></script>
-</head>
-<body>
-    <input type="file" />
-    <script>
-       jQuery(function($) {
-          $(':file').filestyle();
-       });
-    </script>
-</body>
-```
+### Bug tracker
 
-## Documentation and Examples
-http://markusslima.github.com/bootstrap-filestyle/
+Have a bug or a feature request? [Please open a new issue](https://github.com/markusslima/jquery-filestyle/issues).
+
+### Copyright and license
+
+MIT Licence.
 
