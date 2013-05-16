@@ -3,7 +3,7 @@
  * http://dev.tudosobreweb.com.br/jquery-filestyle/
  *
  * Copyright (c) 2013 Markus Vinicius da Silva Lima
- * Version 0.1.0
+ * Version 0.1.3
  * Licensed under the MIT license.
  */
 (function ($) {

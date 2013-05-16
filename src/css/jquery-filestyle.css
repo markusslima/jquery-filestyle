@@ -3,7 +3,7 @@
  * http://dev.tudosobreweb.com.br/jquery-filestyle/
  *
  * Copyright (c) 2013 Markus Vinicius da Silva Lima
- * Version 0.1.0
+ * Version 0.1.3
  * Licensed under the MIT license.
  */
 .jquery-filestyle {
@@ -30,6 +30,10 @@ div.jquery-filestyle input[type=text][disabled] {
   padding: 7px;
   margin-bottom: 10px;
   font-size: 14px;
+  height: 16px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
 }
 
 div.jquery-filestyle label {
@@ -50,6 +54,9 @@ div.jquery-filestyle label {
   margin: 0 5px 10px 0;
   font-size: 14px;
   width: auto;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
 }
 
 div.jquery-filestyle label:hover {
