@@ -1,4 +1,4 @@
-# [jQuery filestyle v0.1.3](http://dev.tudosobreweb.com.br/jquery-filestyle/)
+# [jQuery Filestyle v0.1.3](http://dev.tudosobreweb.com.br/jquery-filestyle/)
 
 Personalize your input file and let the beautiful.
 
