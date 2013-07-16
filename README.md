@@ -5,7 +5,7 @@ Personalize your input file and let the beautiful.
 Maintained by [Markus Lima](https://github.com/markusslima) [@markusslima](https://twitter.com/markusslima)
 
 ### Getting Started, Documentation and Examples
-http://dev.tudosobreweb.com.br/jquery-filestyle/
+http://markusslima.github.io/jquery-filestyle/
 
 ### Bug tracker
 
