@@ -122,7 +122,7 @@
 
         htmlInput: function () {
             if (this.options.input) {
-                return '<input type="text" style="width:'+this.options.size+'" disabled> ';
+		return '<input type="text" placeholder="'+this.options.placeholder+'" style="width:'+this.options.size+'" disabled> ';
             } else {
                 return '';
             }
@@ -215,6 +215,7 @@
         'icon': true,
         'size': '200px',
         'iconName': 'icon-folder-open',
+	'placeholder' : '',
         'theme': ''
     };
 
@@ -232,6 +233,7 @@
                 'icon': $this.attr('data-icon') === 'false' ? false : true,
                 'size': $this.attr('data-size'),
                 'iconName': $this.attr('data-iconName'),
+		'placeholder': $this.attr('data-placeholder'),
                 'theme': $this.attr('data-theme')
             };
 
