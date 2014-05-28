@@ -137,7 +137,7 @@
                 files = [];
 
             if (id === '' || !id) {
-                id = 'jfilestyle-'+$('.jquery-filestyle').length;
+                id = 'jfilestyle-'+$('.jfilestyle').length;
                 this.$element.attr({'id': id});
             }
             
@@ -147,7 +147,7 @@
                     '<span>'+this.options.buttonText+'</span>'+
                  '</label></span>';
 
-            this.$elementjFilestyle = $('<div class="jquery-filestyle '+this.options.theme+'">'+html+'</div>');
+            this.$elementjFilestyle = $('<div class="jfilestyle '+this.options.theme+'">'+html+'</div>');
             $label = this.$elementjFilestyle.find('label');
             this.$elementjFilestyle.find('.focus-jfilestyle')
                 .attr('tabindex', "0")

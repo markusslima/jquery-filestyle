@@ -6,7 +6,7 @@
  * Version 1.0.0
  * Licensed under the MIT license.
  */
-.jquery-filestyle {
+.jfilestyle {
 	display: inline-block;
 	*display: inline;
 	/* IE7 inline-block hack */
@@ -15,14 +15,14 @@
 	padding: 0px;
 }
 
-div.jquery-filestyle label, div.jquery-filestyle input[type=text][disabled] {
+div.jfilestyle label, div.jfilestyle input[type=text][disabled] {
 	font-family: sans-serif;
 }
 
-div.jquery-filestyle input[type=text][disabled] {
+div.jfilestyle input[type=text][disabled] {
 	border: 1px solid #d1d1d1;
 	background: #f9f9f9;
-	margin: 0px;
+	margin: 0px -5px 0px 0px;
 	vertical-align: middle;
 	padding: 7px;
 	font-size: 14px;
@@ -32,7 +32,7 @@ div.jquery-filestyle input[type=text][disabled] {
 	border-radius: 3px 0px 0px 3px;
 }
 
-div.jquery-filestyle label {
+div.jfilestyle label {
 	display: inline-block;
 	*display: inline;
 	/* IE7 inline-block hack */
@@ -44,7 +44,7 @@ div.jquery-filestyle label {
 	vertical-align: middle;
 	line-height: 20px;
 	text-align: center;
-	margin: 0px 0px 0px -5px;
+	margin: 0px;
 	font-size: 14px;
 	width: auto;
 	
@@ -55,7 +55,7 @@ div.jquery-filestyle label {
 
 
 
-div.jquery-filestyle label:hover {
+div.jfilestyle label:hover {
 	background: #f4f4f4;
 	cursor: pointer;
 }
@@ -65,70 +65,70 @@ div.jquery-filestyle label:hover {
  */
 
 /* blue */
-div.jquery-filestyle.blue label {
+div.jfilestyle.blue label {
 	background: #05abe0;
 	border: 1px solid #049ccc;
 	color: #ffffff;
 	text-shadow: -1px -1px 1px #037da4;
 }
 
-div.jquery-filestyle.blue label:hover {
+div.jfilestyle.blue label:hover {
 	background: #049ccc;
 	border: 1px solid #048cb8;
 	text-shadow: -1px -1px 1px #037da4;
 }
 
 /* green */
-div.jquery-filestyle.green label {
+div.jfilestyle.green label {
 	background: #299a0b;
 	border: 1px solid #238509;
 	color: #ffffff;
 	text-shadow: -1px -1px 1px #195f06;
 }
 
-div.jquery-filestyle.green label:hover {
+div.jfilestyle.green label:hover {
 	background: #238509;
 	border: 1px solid #1e7208;
 	text-shadow: -1px -1px 1px #195f06;
 }
 
 /* orange */
-div.jquery-filestyle.orange label {
+div.jfilestyle.orange label {
 	background: #fe7f00;
 	border: 1px solid #ea7500;
 	color: #ffffff;
 	text-shadow: -1px -1px #c16000;
 }
 
-div.jquery-filestyle.orange label:hover {
+div.jfilestyle.orange label:hover {
 	background: #ea7500;
 	border: 1px solid #d66b00;
 	text-shadow: -1px -1px 1px #c16000;
 }
 
 /* red */
-div.jquery-filestyle.red label {
+div.jfilestyle.red label {
 	background: #d00404;
 	border: 1px solid #be0303;
 	color: #ffffff;
 	text-shadow: -1px -1px #960202;
 }
 
-div.jquery-filestyle.red label:hover {
+div.jfilestyle.red label:hover {
 	background: #be0303;
 	border: 1px solid #aa0303;
 	text-shadow: -1px -1px #960202;
 }
 
 /* black */
-div.jquery-filestyle.black label {
+div.jfilestyle.black label {
 	background: #484848;
 	border: 1px solid #3d3d3d;
 	color: #ffffff;
 	text-shadow: -1px -1px #282828;
 }
 
-div.jquery-filestyle.black label:hover {
+div.jfilestyle.black label:hover {
 	background: #3d3d3d;
 	border: 1px solid #333333;
 	text-shadow: -1px -1px #282828;
