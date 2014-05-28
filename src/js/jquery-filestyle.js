@@ -1,9 +1,10 @@
 /*
  * jquery-filestyle
- * http://dev.tudosobreweb.com.br/jquery-filestyle/
+ * doc: http://markusslima.github.io/jquery-filestyle/
+ * github: https://github.com/markusslima/jquery-filestyle
  *
- * Copyright (c) 2013 Markus Vinicius da Silva Lima
- * Version 0.1.3
+ * Copyright (c) 2014 Markus Vinicius da Silva Lima
+ * Version 1.0.0
  * Licensed under the MIT license.
  */
 (function ($) {
@@ -132,6 +133,7 @@
             var _self = this,
                 html = '',
                 id = this.$element.attr('id'),
+                $label,
                 files = [];
 
             if (id === '' || !id) {
@@ -140,16 +142,26 @@
             }
             
             html = this.htmlInput()+
-                 '<label for="'+id+'">'+
+                 '<span class="focus-jfilestyle"><label for="'+id+'">'+
                     this.htmlIcon()+
                     '<span>'+this.options.buttonText+'</span>'+
-                 '</label>';
+                 '</label></span>';
 
-            this.$elementjFilestyle = $('<div class="jquery-filestyle '+this.options.theme+'" style="display: inline;">'+html+'</div>');
+            this.$elementjFilestyle = $('<div class="jquery-filestyle '+this.options.theme+'">'+html+'</div>');
+            $label = this.$elementjFilestyle.find('label');
+            this.$elementjFilestyle.find('.focus-jfilestyle')
+                .attr('tabindex', "0")
+                .keypress(function (e) {
+                    if (e.keyCode === 13 || e.charCode === 32) {
+                        $label.click();
+                        return false;
+                    }
+                });
 
             // hidding input file and add filestyle
             this.$element
-                .css({'position':'absolute','left':'-500px'})
+                .css({'position': 'absolute', 'clip': 'rect(0px 0px 0px 0px)'})
+                .attr('tabindex', "-1")
                 .after(this.$elementjFilestyle);
 
             // Getting input file value

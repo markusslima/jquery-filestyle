@@ -42,6 +42,9 @@ $('#input11').jfilestyle();
 $('#input11').jfilestyle('buttonText', '');
 
 $('#input12').jfilestyle({theme: 'red'});
+
+$('#input13').jfilestyle();
+
 $('#destroy').click(function () {
 	$('#input12').jfilestyle('destroy');
 });
