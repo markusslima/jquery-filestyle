@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="jQuery Customization of input html file for Bootstrap Twitter">
-		<meta name="keywords" content="jquery customization input html file bootstrap twitter">
-		<meta name="author" content="markusslima">
-		<meta http-equiv="expires" content="Tue, 01 Jan 2013 00:00:00 GMT">
-		<meta http-equiv="cache-control" content="public" />
-		<meta http-equiv="Pragma" content="public">
-
-
-        <title>jQuery FileStyle - jquery customization input html file</title>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery FileStyle - jquery customization input html file</title>
 
 		<link rel="icon" type="image/png" href="icons/favicon.png">
-        <!--link href="css/bootstrap.min.css" rel="stylesheet" /-->
-        <link href="../src/css/jquery-filestyle.css" rel="stylesheet" />
-
-		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+		<link href="../src/css/jquery-filestyle.css" rel="stylesheet" />
 		<style>
 			body {
 				font-family: sans-serif;
@@ -30,91 +15,195 @@
 				display: inline-block;
 			}
 		</style>
-    </head>
+	</head>
 
-    <body>
+	<body>
 		<h2>Upload Teste</h2>
-    	<form action="upload.php" enctype="multipart/form-data" method="post">
+		<form action="upload.php" enctype="multipart/form-data" method="post">
 			<input type="file" name="example" id="input01">
-			<button type="submit">Enviar</button>
+			<button type="submit">
+				Enviar
+			</button>
 		</form>
 
 		<h2>Themes</h2>
-		<input type="file" class="jfilestyle"><br>
-		<input type="file" class="jfilestyle" data-theme="green"><br>
-		<input type="file" class="jfilestyle" data-theme="blue"><br>
-		<input type="file" class="jfilestyle" data-theme="red"><br>
-		<input type="file" class="jfilestyle" data-theme="orange"><br>
-		<input type="file" class="jfilestyle" data-theme="black"><br>
+		<input type="file" class="jfilestyle">
+		<br>
+		<input type="file" class="jfilestyle" data-theme="green">
+		<br>
+		<input type="file" class="jfilestyle" data-theme="blue">
+		<br>
+		<input type="file" class="jfilestyle" data-theme="red">
+		<br>
+		<input type="file" class="jfilestyle" data-theme="orange">
+		<br>
+		<input type="file" class="jfilestyle" data-theme="black">
+		<br>
 
 		<h2>Options</h2>
 		<form>
 			<label for="input02">Custom button text</label>
-			<input type="file" id="input02"><br>
+			<input type="file" id="input02">
+			<br>
 
 			<label for="input03">No text field</label>
-			<input type="file" id="input03"><br>
+			<input type="file" id="input03">
+			<br>
 
 			<label for="input04">No icon</label>
-			<input type="file" id="input04"><br>
+			<input type="file" id="input04">
+			<br>
 
 			<label for="input05">Change theme</label>
-			<input type="file" id="input05"><br>
+			<input type="file" id="input05">
+			<br>
 
 			<label for="input06">Input size</label>
-			<input type="file" id="input06"><br>
-								
+			<input type="file" id="input06">
+			<br>
+
 			<label for="input07">Change icon</label>
-			<input type="file" id="input07"><br>
+			<input type="file" id="input07">
+			<br>
 		</form>
 
 		<h2>Methods</h2>
 		<form>
 			<label for="input08">Clear</label>
 			<input type="file" id="input08">
-			<button id="clear" type="button">Clear</button><br>
+			<button id="clear" type="button">
+				Clear
+			</button>
+			<br>
 
 			<label for="input09">Toggle button</label>
 			<input type="file" id="input09">
-			<button id="toggleInput" type="button">Toggle input</button><br>
+			<button id="toggleInput" type="button">
+				Toggle input
+			</button>
+			<br>
 
 			<label for="input10">Toggle icon</label>
 			<input type="file" id="input10">
-			<button id="toggleIcon" type="button">Toggle icon</button><br>
+			<button id="toggleIcon" type="button">
+				Toggle icon
+			</button>
+			<br>
 
 			<label for="input11">Remove text button</label>
-			<input type="file" id="input11"><br>
+			<input type="file" id="input11">
+			<br>
 
 			<label for="input12">Destroy</label>
 			<input type="file" id="input12">
-			<button id="destroy" type="button">Destroy</button><br>
-			
+			<button id="destroy" type="button">
+				Destroy
+			</button>
+			<br>
+
 			<label for="input13">Multiple</label>
 			<input type="file" id="input13" multiple="multiple">
 		</form>
 
 		<h2>Advanced selector jquery</h2>
 		<form class="form">
-			<input type="file" class="test"><br>
-			<input type="file" class="test"><br>
-			<input type="file" class="test"><br>
+			<input type="file" class="test">
+			<br>
+			<input type="file" class="test">
+			<br>
+			<input type="file" class="test">
+			<br>
 			<input type="file" class="test">
 		</form>
 
 		<h2>Data attributes</h2>
 		<form>
-			<input type="file" class="jfilestyle" data-icon="false"><br>
-			<input type="file" class="jfilestyle" data-buttonText="Find" data-input="false"><br>
-			<input type="file" class="jfilestyle" data-size="300px"><br>
+			<input type="file" class="jfilestyle" data-icon="false">
+			<br>
+			<input type="file" class="jfilestyle" data-buttonText="Find" data-input="false">
+			<br>
+			<input type="file" class="jfilestyle" data-size="300px">
+			<br>
 			<input type="file" class="jfilestyle" data-buttonText="Open" data-iconName="icon-plus" data-theme="orange">
-        </form>
-        <br>
-        <br>
-        <br>
-        <br>
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <!--script type="text/javascript" src="js/bootstrap.min.js"></script-->
-        <script type="text/javascript" src="../src/js/jquery-filestyle.js"></script>
-        <script type="text/javascript" src="js/aplication.js"></script>
-    </body>
+		</form>
+		<br>
+		<br>
+		<br>
+		<br>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../src/js/jquery-filestyle.js"></script>
+		<script type="text/javascript">
+			$('#input01').jfilestyle()
+
+			$('#input02').jfilestyle({
+				buttonText : 'My filestyle'
+			});
+
+			$('#input03').jfilestyle({
+				input : false
+			});
+
+			$('#input04').jfilestyle({
+				icon : false
+			});
+
+			$('#input05').jfilestyle({
+				theme : 'blue'
+			});
+
+			$('#input06').jfilestyle({
+				size : '100px'
+			});
+
+			$('#input07').jfilestyle({
+				iconName : 'icon-camera'
+			});
+
+			$('#input08').jfilestyle();
+
+			$('#clear').click(function() {
+				$('#input08').jfilestyle('clear');
+			});
+
+			$('#input09').jfilestyle({
+				theme : 'orange'
+			});
+
+			$('#toggleInput').click(function() {
+				var fs = $('#input09');
+				if (fs.jfilestyle('input'))
+					fs.jfilestyle('input', false);
+				else
+					fs.jfilestyle('input', true);
+			});
+
+			$('#input10').jfilestyle({
+				theme : 'green'
+			});
+
+			$('#toggleIcon').click(function() {
+				var fs = $('#input10');
+				if (fs.jfilestyle('icon'))
+					fs.jfilestyle('icon', false);
+				else
+					fs.jfilestyle('icon', true);
+			});
+
+			$('#input11').jfilestyle();
+			$('#input11').jfilestyle('buttonText', '');
+
+			$('#input12').jfilestyle({
+				theme : 'red'
+			});
+
+			$('#input13').jfilestyle();
+
+			$('#destroy').click(function() {
+				$('#input12').jfilestyle('destroy');
+			});
+
+			$('.form').find(':file').jfilestyle();
+		</script>
+
+	</body>
 </html>
