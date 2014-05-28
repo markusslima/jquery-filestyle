@@ -103,6 +103,10 @@
 
 			<label for="input13">Multiple</label>
 			<input type="file" id="input13" multiple="multiple">
+			<br>
+			
+			<label for="input14">Disabled</label>
+			<input type="file" id="input14">
 		</form>
 
 		<h2>Advanced selector jquery</h2>
@@ -197,6 +201,7 @@
 			});
 
 			$('#input13').jfilestyle();
+			$('#input14').jfilestyle({disabled: true});
 
 			$('#destroy').click(function() {
 				$('#input12').jfilestyle('destroy');

@@ -29,6 +29,24 @@
                 .val('');
             this.$elementjFilestyle.remove();
         },
+        
+        disabled : function(value) {
+			if (value === true) {
+				if (!this.options.disabled) {
+					this.$element.attr('disabled', 'true');
+					this.$elementjFilestyle.find('label').attr('disabled', 'true');
+					this.options.disabled = true;
+				}
+			} else if (value === false) {
+				if (this.options.disabled) {
+					this.$element.removeAttr('disabled');
+					this.$elementjFilestyle.find('label').removeAttr('disabled');
+					this.options.disabled = false;
+				}
+			} else {
+				return this.options.disabled;
+			}
+		},
 
         icon: function (value) {
             if (value === true) {
@@ -142,7 +160,7 @@
             }
             
             html = this.htmlInput()+
-                 '<span class="focus-jfilestyle"><label for="'+id+'">'+
+                 '<span class="focus-jfilestyle"><label for="'+id+'" ' + (this.options.disabled ? 'disabled="true"' : '') + '>'+
                     this.htmlIcon()+
                     '<span>'+this.options.buttonText+'</span>'+
                  '</label></span>';
@@ -163,7 +181,11 @@
                 .css({'position': 'absolute', 'clip': 'rect(0px 0px 0px 0px)'})
                 .attr('tabindex', "-1")
                 .after(this.$elementjFilestyle);
-
+			
+			if (this.options.disabled) {
+				this.$element.attr('disabled', 'true');
+			}
+			
             // Getting input file value
             this.$element.change(function () {
                 var content = '';
@@ -225,6 +247,7 @@
         'buttonText': 'Choose file',
         'input': true,
         'icon': true,
+        'disabled': false,
         'size': '200px',
         'iconName': 'icon-folder-open',
         'theme': ''
@@ -242,6 +265,7 @@
                 'buttonText': $this.attr('data-buttonText'),
                 'input': $this.attr('data-input') === 'false' ? false : true,
                 'icon': $this.attr('data-icon') === 'false' ? false : true,
+                'disabled': $this.attr('data-disabled') === 'true' ? true : false,
                 'size': $this.attr('data-size'),
                 'iconName': $this.attr('data-iconName'),
                 'theme': $this.attr('data-theme')

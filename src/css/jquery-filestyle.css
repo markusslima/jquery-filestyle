@@ -23,7 +23,7 @@
 	padding: 0px;
 }
 
-div.jfilestyle label, div.jfilestyle input[type=text][disabled] {
+div.jfilestyle label, div.jfilestyle input {
 	font-family: sans-serif;
 }
 
@@ -38,6 +38,7 @@ div.jfilestyle input[type=text][disabled] {
 	-webkit-border-radius: 3px 0px 0px 3px;
 	-moz-border-radius: 3px 0px 0px 3px;
 	border-radius: 3px 0px 0px 3px;
+	color: #8d8d8d;
 }
 
 div.jfilestyle label {
@@ -58,6 +59,15 @@ div.jfilestyle label {
 	-webkit-border-radius: 0px 3px 3px 0px;
 	-moz-border-radius: 0px 3px 3px 0px;
 	border-radius: 0px 3px 3px 0px;
+}
+
+div.jfilestyle label[disabled] {
+	cursor: not-allowed;
+	pointer-events: none;
+	opacity: .65;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 div.jfilestyle label:hover {
