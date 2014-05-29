@@ -107,6 +107,10 @@
 			
 			<label for="input14">Disabled</label>
 			<input type="file" id="input14">
+			<br>
+			
+			<label for="input15">Button before</label>
+			<input type="file" id="input15">
 		</form>
 
 		<h2>Advanced selector jquery</h2>
@@ -202,6 +206,7 @@
 
 			$('#input13').jfilestyle();
 			$('#input14').jfilestyle({disabled: true});
+			$('#input15').jfilestyle({buttonBefore: true});
 
 			$('#destroy').click(function() {
 				$('#input12').jfilestyle('destroy');

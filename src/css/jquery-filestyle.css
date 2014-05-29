@@ -21,13 +21,15 @@
 	*zoom: 1;
 	margin: 0px 0px 10px 0px;
 	padding: 0px;
+	position: relative;
+	border-collapse: separate;
 }
 
 div.jfilestyle label, div.jfilestyle input {
 	font-family: sans-serif;
 }
 
-div.jfilestyle input[type=text][disabled] {
+div.jfilestyle input {
 	border: 1px solid #d1d1d1;
 	background: #f9f9f9;
 	margin: 0px -5px 0px 0px;
@@ -35,10 +37,9 @@ div.jfilestyle input[type=text][disabled] {
 	padding: 7px;
 	font-size: 14px;
 	height: 16px;
-	-webkit-border-radius: 3px 0px 0px 3px;
-	-moz-border-radius: 3px 0px 0px 3px;
 	border-radius: 3px 0px 0px 3px;
 	color: #8d8d8d;
+	opacity: 0.6;
 }
 
 div.jfilestyle label {
@@ -56,15 +57,13 @@ div.jfilestyle label {
 	margin: 0px;
 	font-size: 14px;
 	width: auto;
-	-webkit-border-radius: 0px 3px 3px 0px;
-	-moz-border-radius: 0px 3px 3px 0px;
 	border-radius: 0px 3px 3px 0px;
 }
 
 div.jfilestyle label[disabled] {
 	cursor: not-allowed;
 	pointer-events: none;
-	opacity: .65;
+	opacity: 0.6;
 	filter: alpha(opacity=65);
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -74,6 +73,33 @@ div.jfilestyle label:hover {
 	background: #f4f4f4;
 	cursor: pointer;
 }
+
+div.jfilestyle.jfilestyle-buttonbefore label {
+	border-radius: 3px 0px 0px 3px;
+	margin-right: -1px;
+}
+
+div.jfilestyle.jfilestyle-buttonbefore input {
+	border-radius: 0px 3px 3px 0px;
+	margin-right: 0px;
+}
+
+div.jfilestyle .count-jfilestyle {
+	background: #000;
+	color: #fff;
+	border-radius: 50%;
+	padding: 1px 5px;
+}
+
+div.jfilestyle.blue .count-jfilestyle,
+div.jfilestyle.green .count-jfilestyle,
+div.jfilestyle.orange .count-jfilestyle,
+div.jfilestyle.red .count-jfilestyle,
+div.jfilestyle.black .count-jfilestyle {
+	background: #fff;
+	color: #000;
+}
+
 
 /**
  * Themes
