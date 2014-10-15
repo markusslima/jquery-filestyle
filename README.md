@@ -15,3 +15,4 @@ Have a bug or a feature request? [Please open a new issue](https://github.com/ma
 
 MIT Licence.
 
+[ ![Codeship Status for markusslima/jquery-filestyle](https://www.codeship.io/projects/f54616a0-368c-0132-02be-66e2e8c2d9ae/status)](https://www.codeship.io/projects/41427)
