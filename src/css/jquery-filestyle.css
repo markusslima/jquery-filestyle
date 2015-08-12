@@ -2,8 +2,8 @@
  * jquery-filestyle
  * http://dev.tudosobreweb.com.br/jquery-filestyle/
  *
- * Copyright (c) 2013 Markus Vinicius da Silva Lima
- * Version 1.0.0
+ * Copyright (c) 2015 Markus Vinicius da Silva Lima
+ * Version 1.4.0
  * Licensed under the MIT license.
  */
 @font-face {
@@ -34,54 +34,60 @@ div.jfilestyle input {
 	background: #f9f9f9;
 	margin: 0px -5px 0px 0px;
 	vertical-align: middle;
-	padding: 7px;
-	font-size: 14px;
+	padding: 0.5em;
+	font-size: 1em;
 	height: 16px;
-	border-radius: 3px 0px 0px 3px;
+	border-radius: 4px;
 	color: #8d8d8d;
 	opacity: 0.6;
 }
 
 div.jfilestyle label {
 	display: inline-block;
-	*display: inline;
-	/* IE7 inline-block hack */
-	*zoom: 1;
 	border: 1px solid #d1d1d1;
 	background: #ffffff;
-	padding: 5px 12px;
+	padding: 0.5em 1em;
 	color: #0662ba;
 	vertical-align: middle;
-	line-height: 20px;
+	line-height: 15px;
 	text-align: center;
 	margin: 0px;
-	font-size: 14px;
+	font-size: 1em;
 	width: auto;
-	border-radius: 0px 3px 3px 0px;
+	border-radius: 4px;
+	height: 14px;
+}
+
+div.jfilestyle.jfilestyle-corner input:first-child {
+	border-right: 0;
+}
+
+div.jfilestyle.jfilestyle-corner input:last-child {
+	border-left: 0;
+}
+
+div.jfilestyle.jfilestyle-corner input:first-child,
+div.jfilestyle.jfilestyle-corner span:first-child>label {
+	border-radius: 4px 0 0 4px;	
+}
+
+div.jfilestyle.jfilestyle-corner input:last-child,
+div.jfilestyle.jfilestyle-corner span:last-child>label {
+	border-radius: 0 4px 4px 0;	
 }
 
 div.jfilestyle label[disabled] {
-	cursor: not-allowed;
 	pointer-events: none;
 	opacity: 0.6;
 	filter: alpha(opacity=65);
 	-webkit-box-shadow: none;
 	box-shadow: none;
+	cursor: not-allowed;
 }
 
 div.jfilestyle label:hover {
 	background: #f4f4f4;
 	cursor: pointer;
-}
-
-div.jfilestyle.jfilestyle-buttonbefore label {
-	border-radius: 3px 0px 0px 3px;
-	margin-right: -1px;
-}
-
-div.jfilestyle.jfilestyle-buttonbefore input {
-	border-radius: 0px 3px 3px 0px;
-	margin-right: 0px;
 }
 
 div.jfilestyle .count-jfilestyle {
@@ -175,8 +181,6 @@ div.jfilestyle.black label:hover {
 	text-shadow: -1px -1px #282828;
 }
 
-
-
 [class^="icon-"]:before, [class*=" icon-"]:before {
 	font-family: "fontello";
 	font-style: normal;
@@ -187,29 +191,18 @@ div.jfilestyle.black label:hover {
 	width: 1em;
 	margin-right: .2em;
 	text-align: center;
-	/* opacity: .8; */
-
-	/* For safety - reset parent styles, that can break glyph codes*/
 	font-variant: normal;
 	text-transform: none;
-	/* fix buttons height, for twitter bootstrap */
 	line-height: 1em;
-	/* Animation center compensation - margins should be symmetric */
-	/* remove if not needed */
 	margin-left: .2em;
-	/* you can be more comfortable with increased icons size */
-	/* font-size: 120%; */
-
-	/* Uncomment for 3D effect */
-	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-videocam:before {
 	content: '\e800';
-}/* '' */
+}
 .icon-camera:before {
 	content: '\e801';
-}/* '' */
+}
 .icon-folder-open:before {
 	content: '\e802';
-} /* '' */
+}

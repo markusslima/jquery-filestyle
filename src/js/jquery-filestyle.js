@@ -3,12 +3,14 @@
  * doc: http://markusslima.github.io/jquery-filestyle/
  * github: https://github.com/markusslima/jquery-filestyle
  *
- * Copyright (c) 2014 Markus Vinicius da Silva Lima
- * Version 1.0.0
+ * Copyright (c) 2015 Markus Vinicius da Silva Lima
+ * Version 1.4.0
  * Licensed under the MIT license.
  */
 (function ($) {
     "use strict";
+    
+    var nextId = 0;
     
     var JFilestyle = function (element, options) {
         this.options = options;
@@ -201,23 +203,20 @@
                 _self.$element.attr({'id': id});
             }
             
+            html = '<span class="focus-jfilestyle">'+
+                     '<label for="'+id+'" ' + (_self.options.disabled ? 'disabled="true"' : '') + '>'+
+                       _self.htmlIcon()+
+                      '<span>'+_self.options.buttonText+'</span>'+
+                     '</label>'+
+                   '</span>';
+            
             if (_self.options.buttonBefore === true) {
-	            html = '<span class="focus-jfilestyle">'+
-	            	   	 '<label for="'+id+'" ' + (_self.options.disabled ? 'disabled="true"' : '') + '>'+
-	                       _self.htmlIcon()+
-	                       '<span>'+_self.options.buttonText+'</span>'+
-	                     '</label>'+
-	                   '</span>' + _self.htmlInput();
+	            html = html + _self.htmlInput();
             } else {
-	            html = _self.htmlInput()+
-	                 '<span class="focus-jfilestyle"><label for="'+id+'" ' + (_self.options.disabled ? 'disabled="true"' : '') + '>'+
-	                    _self.htmlIcon()+
-	                    '<span>'+_self.options.buttonText+'</span>'+
-	                 '</label></span>';     
+	            html = _self.htmlInput() + html;
             }
 
-            _self.$elementjFilestyle = $('<div class="jfilestyle ' + this.options.theme + ' ' + (this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '') + '">'+html+'</div>');
-            //$label = _self.$elementjFilestyle.find('label');
+            _self.$elementjFilestyle = $('<div class="jfilestyle ' + (_self.options.input?'jfilestyle-corner':'')+' ' + this.options.theme + ' ' + (this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '') + '">'+html+'</div>');
             _self.$elementjFilestyle.find('.focus-jfilestyle')
                 .attr('tabindex', "0")
                 .keypress(function (e) {
@@ -309,21 +308,22 @@
         return this;
     };
 
-    // Data attributes register
-    $('.jfilestyle').each(function () {
-        var $this = $(this),
-            options = {
-                'buttonText': $this.attr('data-buttonText'),
-                'input': $this.attr('data-input') === 'false' ? false : true,
-                'icon': $this.attr('data-icon') === 'false' ? false : true,
-                'disabled': $this.attr('data-disabled') === 'true' ? true : false,
-                'buttonBefore': $this.attr('data-buttonBefore') === 'true' ? true : false,
-                'size': $this.attr('data-size'),
-                'iconName': $this.attr('data-iconName'),
-                'theme': $this.attr('data-theme')
-            };
-
-        $this.jfilestyle(options);
+    $(function() {
+        // Data attributes register
+        $('.jfilestyle').each(function () {
+            var $this = $(this),
+                options = {
+                    'buttonText': $this.attr('data-buttonText'),
+                    'input': $this.attr('data-input') === 'false' ? false : true,
+                    'icon': $this.attr('data-icon') === 'false' ? false : true,
+                    'disabled': $this.attr('data-disabled') === 'true' ? true : false,
+                    'buttonBefore': $this.attr('data-buttonBefore') === 'true' ? true : false,
+                    'size': $this.attr('data-size'),
+                    'iconName': $this.attr('data-iconName'),
+                    'theme': $this.attr('data-theme')
+                };
+    
+            $this.jfilestyle(options);
+        });
     });
-
 })(window.jQuery);
