@@ -123,6 +123,18 @@
 			} else {
 				return this.options.placeholder;
 			}
+		},
+        
+        color : function(value) {
+            if (typeof value !== 'object') {
+                window.console.error('color option not object');
+                return false;
+            } else if (value !== undefined) {
+				this.options.color = value;
+				this.$elementjFilestyle.find('label').css(value);
+			} else {
+				return this.options.color;
+			}
 		},	
 
         htmlInput: function () {
@@ -192,6 +204,10 @@
                         return false;
                     }
                 });
+
+            if (typeof _self.options.color === 'object') {
+                _self.$elementjFilestyle.find('label').css(_self.options.color);
+            }
 
             // hidding input file and add filestyle
             _self.$element
@@ -266,7 +282,8 @@
         'buttonBefore': false,
         'inputSize': '200px',
         'theme': '',
-        'placeholder': ''
+        'placeholder': '',
+        'color': 'default'
     };
 
     $.fn.jfilestyle.noConflict = function () {
@@ -285,7 +302,8 @@
                     'buttonBefore': $this.attr('data-buttonBefore') === 'true' ? true : false,
                     'inputSize': $this.attr('data-inputSize'),
                     'theme': $this.attr('data-theme'),
-                    'placeholder': $this.attr('data-placeholder')
+                    'placeholder': $this.attr('data-placeholder'),
+                    'color': $this.attr('data-color')
                 };
     
             $this.jfilestyle(options);

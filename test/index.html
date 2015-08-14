@@ -35,6 +35,10 @@
 			<label for="input03">No text field</label>
 			<input type="file" id="input03">
 			<br>
+			
+			<label for="input04">Color button</label>
+			<input type="file" id="input04">
+			<br>
 
 			<label for="input06">Input size</label>
 			<input type="file" id="input06">
@@ -99,7 +103,7 @@
 			<br>
 			<input type="file" class="jfilestyle" data-size="300px">
 			<br>
-			<input type="file" class="jfilestyle" data-buttonText="Open" data-iconName="icon-plus" data-theme="orange">
+			<input type="file" class="jfilestyle" data-buttonText="Open">
 		</form>
 		<br>
 		<br>
@@ -118,6 +122,10 @@
 				input : false
 			});
 
+			$('#input04').jfilestyle({
+				color : {'background': '#555555', 'color': '#fff', 'border-color': '#000'}
+			});
+			
 			$('#input06').jfilestyle({
 				inputSize : '100px'
 			});

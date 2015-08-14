@@ -74,8 +74,8 @@ div.jfilestyle label[disabled] {
 }
 
 div.jfilestyle label:hover {
-	background: #f4f4f4;
 	cursor: pointer;
+	opacity: 0.9;
 }
 
 div.jfilestyle .count-jfilestyle {
