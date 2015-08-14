@@ -4,7 +4,7 @@
  * github: https://github.com/markusslima/jquery-filestyle
  *
  * Copyright (c) 2015 Markus Vinicius da Silva Lima
- * Version 1.4.0
+ * Version 1.5.0
  * Licensed under the MIT license.
  */
 (function ($) {
@@ -74,22 +74,6 @@
 			}
 		},
 
-        icon: function (value) {
-            if (value === true) {
-                if (!this.options.icon) {
-                    this.options.icon = true;
-                    this.$elementjFilestyle.find('label').prepend(this.htmlIcon());
-                }
-            } else if (value === false) {
-                if (this.options.icon) {
-                    this.options.icon = false;
-                    this.$elementjFilestyle.find('i').remove();
-                }
-            } else {
-                return this.options.icon;
-            }
-        },
-
         input: function (value) {
             if (value === true) {
                 if (!this.options.input) {
@@ -122,45 +106,28 @@
                 return this.options.buttonText;
             }
         },
-
-        iconName: function (value) {
+        
+        inputSize: function (value) {
             if (value !== undefined) {
-                this.options.iconName = value;
-                if (this.options.theme.search(/blue|green|red|orange|black/i) !== -1) {
-                    this.$elementjFilestyle.find('label').find('i').attr({'class': 'icon-white '+this.options.iconName});
-                } else {
-                    this.$elementjFilestyle.find('label').find('i').attr({'class': this.options.iconName});
-                }
+                this.options.inputSize = value;
+                this.$elementjFilestyle.find(':text').css('width', this.options.inputSize);
             } else {
-                return this.options.iconName;
+                return this.options.inputSize;
             }
         },
-
-        size: function (value) {
-            if (value !== undefined) {
-                this.options.size = value;
-                this.$elementjFilestyle.find(':text').css('width', this.options.size);
-            } else {
-                return this.options.size;
-            }
-        },
-
-        htmlIcon: function () {
-            if (this.options.icon) {
-                var colorIcon = '';
-                if (this.options.theme.search(/blue|green|red|orange|black/i) !== -1) {
-                    colorIcon = ' icon-white ';
-                }
-
-                return '<i class="'+colorIcon+this.options.iconName+'"></i> ';
-            } else {
-                return '';
-            }
-        },
+        
+		placeholder : function(value) {
+			if (value !== undefined) {
+				this.options.placeholder = value;
+				this.$elementjFilestyle.find(':text').attr('placeholder', value);
+			} else {
+				return this.options.placeholder;
+			}
+		},	
 
         htmlInput: function () {
             if (this.options.input) {
-                return '<input type="text" style="width:'+this.options.size+'" disabled> ';
+                return '<input type="text" style="width:'+this.options.inputSize+'" placeholder="'+ this.options.placeholder +'" disabled> ';
             } else {
                 return '';
             }
@@ -199,14 +166,14 @@
                 files = [];
 
             if (id === '' || !id) {
-                id = 'jfilestyle-'+$('.jfilestyle').length;
+                id = 'jfilestyle-' + nextId;
                 _self.$element.attr({'id': id});
+                nextId++;
             }
             
             html = '<span class="focus-jfilestyle">'+
                      '<label for="'+id+'" ' + (_self.options.disabled ? 'disabled="true"' : '') + '>'+
-                       _self.htmlIcon()+
-                      '<span>'+_self.options.buttonText+'</span>'+
+                       '<span>'+_self.options.buttonText+'</span>'+
                      '</label>'+
                    '</span>';
             
@@ -295,11 +262,9 @@
     $.fn.jfilestyle.defaults = {
         'buttonText': 'Choose file',
         'input': true,
-        'iconName': 'icon-folder-open',
-        'icon': true,
         'disabled': false,
         'buttonBefore': false,
-        'size': '200px',
+        'inputSize': '200px',
         'theme': '',
         'placeholder': ''
     };
@@ -315,12 +280,10 @@
             var $this = $(this),
                 options = {
                     'buttonText': $this.attr('data-buttonText'),
-                    'iconName': $this.attr('data-iconName'),
-                    'icon': $this.attr('data-icon') === 'false' ? false : true,
                     'input': $this.attr('data-input') === 'false' ? false : true,
                     'disabled': $this.attr('data-disabled') === 'true' ? true : false,
                     'buttonBefore': $this.attr('data-buttonBefore') === 'true' ? true : false,
-                    'size': $this.attr('data-size'),
+                    'inputSize': $this.attr('data-inputSize'),
                     'theme': $this.attr('data-theme'),
                     'placeholder': $this.attr('data-placeholder')
                 };
