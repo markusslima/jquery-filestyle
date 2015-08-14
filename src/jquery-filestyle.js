@@ -295,12 +295,13 @@
     $.fn.jfilestyle.defaults = {
         'buttonText': 'Choose file',
         'input': true,
+        'iconName': 'icon-folder-open',
         'icon': true,
         'disabled': false,
         'buttonBefore': false,
         'size': '200px',
-        'iconName': 'icon-folder-open',
-        'theme': ''
+        'theme': '',
+        'placeholder': ''
     };
 
     $.fn.jfilestyle.noConflict = function () {
@@ -314,13 +315,14 @@
             var $this = $(this),
                 options = {
                     'buttonText': $this.attr('data-buttonText'),
-                    'input': $this.attr('data-input') === 'false' ? false : true,
+                    'iconName': $this.attr('data-iconName'),
                     'icon': $this.attr('data-icon') === 'false' ? false : true,
+                    'input': $this.attr('data-input') === 'false' ? false : true,
                     'disabled': $this.attr('data-disabled') === 'true' ? true : false,
                     'buttonBefore': $this.attr('data-buttonBefore') === 'true' ? true : false,
                     'size': $this.attr('data-size'),
-                    'iconName': $this.attr('data-iconName'),
-                    'theme': $this.attr('data-theme')
+                    'theme': $this.attr('data-theme'),
+                    'placeholder': $this.attr('data-placeholder')
                 };
     
             $this.jfilestyle(options);
