@@ -4,8 +4,7 @@
 		<meta charset="utf-8">
 		<title>jQuery FileStyle - jquery customization input html file</title>
 
-		<link rel="icon" type="image/png" href="icons/favicon.png">
-		<link href="../src/css/jquery-filestyle.css" rel="stylesheet" />
+		<link href="../src/jquery-filestyle.css" rel="stylesheet" />
 		<style>
 			body {
 				font-family: sans-serif;
@@ -27,20 +26,6 @@
 			</button>
 		</form>
 
-		<h2>Themes</h2>
-		<input type="file" class="jfilestyle">
-		<br>
-		<input type="file" class="jfilestyle" data-theme="green">
-		<br>
-		<input type="file" class="jfilestyle" data-theme="blue">
-		<br>
-		<input type="file" class="jfilestyle" data-theme="red">
-		<br>
-		<input type="file" class="jfilestyle" data-theme="orange">
-		<br>
-		<input type="file" class="jfilestyle" data-theme="black">
-		<br>
-
 		<h2>Options</h2>
 		<form>
 			<label for="input02">Custom button text</label>
@@ -51,19 +36,11 @@
 			<input type="file" id="input03">
 			<br>
 
-			<label for="input04">No icon</label>
-			<input type="file" id="input04">
-			<br>
-
-			<label for="input05">Change theme</label>
-			<input type="file" id="input05">
-			<br>
-
 			<label for="input06">Input size</label>
 			<input type="file" id="input06">
 			<br>
-
-			<label for="input07">Change icon</label>
+			
+			<label for="input07">Placeholder</label>
 			<input type="file" id="input07">
 			<br>
 		</form>
@@ -77,22 +54,11 @@
 			</button>
 			<br>
 
-			<label for="input09">Toggle button</label>
+			<label for="input09">Toggle input</label>
 			<input type="file" id="input09">
 			<button id="toggleInput" type="button">
 				Toggle input
 			</button>
-			<br>
-
-			<label for="input10">Toggle icon</label>
-			<input type="file" id="input10">
-			<button id="toggleIcon" type="button">
-				Toggle icon
-			</button>
-			<br>
-
-			<label for="input11">Remove text button</label>
-			<input type="file" id="input11">
 			<br>
 
 			<label for="input12">Destroy</label>
@@ -139,8 +105,8 @@
 		<br>
 		<br>
 		<br>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript" src="../src/js/jquery-filestyle.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../src/jquery-filestyle.js"></script>
 		<script type="text/javascript">
 			$('#input01').jfilestyle()
 
@@ -152,31 +118,20 @@
 				input : false
 			});
 
-			$('#input04').jfilestyle({
-				icon : false
-			});
-
-			$('#input05').jfilestyle({
-				theme : 'blue'
-			});
-
 			$('#input06').jfilestyle({
-				size : '100px'
+				inputSize : '100px'
 			});
-
+			
 			$('#input07').jfilestyle({
-				iconName : 'icon-camera'
+				placeholder: 'My text placeholder'
 			});
-
 			$('#input08').jfilestyle();
 
 			$('#clear').click(function() {
 				$('#input08').jfilestyle('clear');
 			});
 
-			$('#input09').jfilestyle({
-				theme : 'orange'
-			});
+			$('#input09').jfilestyle();
 
 			$('#toggleInput').click(function() {
 				var fs = $('#input09');
@@ -185,21 +140,6 @@
 				else
 					fs.jfilestyle('input', true);
 			});
-
-			$('#input10').jfilestyle({
-				theme : 'green'
-			});
-
-			$('#toggleIcon').click(function() {
-				var fs = $('#input10');
-				if (fs.jfilestyle('icon'))
-					fs.jfilestyle('icon', false);
-				else
-					fs.jfilestyle('icon', true);
-			});
-
-			$('#input11').jfilestyle();
-			$('#input11').jfilestyle('buttonText', '');
 
 			$('#input12').jfilestyle({
 				theme : 'red'
@@ -210,7 +150,13 @@
 			$('#input15').jfilestyle({buttonBefore: true});
 
 			$('#destroy').click(function() {
-				$('#input12').jfilestyle('destroy');
+				if ($('#input12').data('jfilestyle')) {
+					$('#input12').jfilestyle('destroy');
+					$(this).html('Construct');
+				} else {
+					$('#input12').jfilestyle();
+					$(this).html('Destroy');
+				}
 			});
 
 			$('.test').jfilestyle();
