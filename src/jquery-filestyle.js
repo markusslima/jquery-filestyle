@@ -4,7 +4,7 @@
  * github: https://github.com/markusslima/jquery-filestyle
  *
  * Copyright (c) 2015 Markus Vinicius da Silva Lima
- * Version 1.5.0
+ * Version 1.5.1
  * Licensed under the MIT license.
  */
 (function ($) {

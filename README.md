@@ -1,4 +1,4 @@
-# [jQuery Filestyle v1.5.0](http://markusslima.github.io/jquery-filestyle/)
+# [jQuery Filestyle v1.5.1](http://markusslima.github.io/jquery-filestyle/)
 
 Personalize your input file and let the beautiful.
 
