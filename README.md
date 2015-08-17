@@ -1,6 +1,22 @@
-# [jQuery Filestyle v0.1.3](http://dev.tudosobreweb.com.br/jquery-filestyle/)
+# [jQuery Filestyle v1.5.0](http://markusslima.github.io/jquery-filestyle/)
 
 Personalize your input file and let the beautiful.
+
+------------------------------------------------------------------------------------
+# Alert
+
+###**Please send to (issues) problems with the plugin, also send more details as:**
+* Browser
+* Version
+* Examples using [jsfiddle.net](https://jsfiddle.net/)
+* Other plugins involved
+* Etc.
+ 
+**Detail the most of your problem to speed up the correction process.**
+
+Thank you!
+
+-------------------------------------------------------------------------------------
 
 Maintained by [Markus Lima](https://github.com/markusslima) [@markusslima](https://twitter.com/markusslima)
 
