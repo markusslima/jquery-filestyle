@@ -195,7 +195,7 @@
 	            html = _self.htmlInput() + html;
             }
 
-            _self.$elementjFilestyle = $('<div class="jfilestyle ' + (_self.options.input?'jfilestyle-corner':'')+' ' + this.options.theme + ' ' + (this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '') + '">'+html+'</div>');
+            _self.$elementjFilestyle = $('<div class="jfilestyle ' + (_self.options.input?'jfilestyle-corner':'') + ' ' + (this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '') + '">'+html+'</div>');
             _self.$elementjFilestyle.find('.focus-jfilestyle')
                 .attr('tabindex', "0")
                 .keypress(function (e) {
@@ -281,7 +281,6 @@
         'disabled': false,
         'buttonBefore': false,
         'inputSize': '200px',
-        'theme': '',
         'placeholder': '',
         'color': 'default'
     };
@@ -301,7 +300,6 @@
                     'disabled': $this.attr('data-disabled') === 'true' ? true : false,
                     'buttonBefore': $this.attr('data-buttonBefore') === 'true' ? true : false,
                     'inputSize': $this.attr('data-inputSize'),
-                    'theme': $this.attr('data-theme'),
                     'placeholder': $this.attr('data-placeholder'),
                     'color': $this.attr('data-color')
                 };
