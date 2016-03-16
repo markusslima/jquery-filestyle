@@ -1,0 +1,11 @@
+{
+  "name": "jquery-filestyle",
+  "description": "Personalize your input file and let the beautiful",
+  "version": "2.0.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}
