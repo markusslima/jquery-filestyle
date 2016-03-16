@@ -1,0 +1,24 @@
+{
+  "name": "jquery-filestyle",
+  "description": "Personalize your input file and let the beautiful",
+  "main": [
+    "dist/jquery-filestyle.min.css",
+    "dist/jquery-filestyle.min.js",
+  ],
+  "license": "MIT",
+  "ignore": [
+    "test",
+  ],
+  "author": [
+    "Markus Lima <markusslima@gmail.com>",
+    "Memory Clutter <memclutter@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/starcode-krasnodar/jquery-filestyle",
+  },
+  "dependencies": {
+    "jquery": "^2.2.1"
+  },
+  "private": false
+}
