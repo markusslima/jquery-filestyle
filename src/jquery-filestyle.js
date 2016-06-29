@@ -127,7 +127,11 @@
 
         htmlInput: function () {
             if (this.options.input) {
-                return '<input type="text" style="width:'+this.options.inputSize+'" placeholder="'+ this.options.placeholder +'" disabled> ';
+                var inputSize = this.options.inputSize;
+                if(this.options.inputSize == 'responsive') {
+                    inputSize = '100%';
+                }
+                return '<input type="text" style="width:'+inputSize+'" placeholder="'+ this.options.placeholder +'" disabled> ';
             } else {
                 return '';
             }
@@ -183,7 +187,11 @@
 	            html = _self.htmlInput() + html;
             }
 
-            _self.$elementjFilestyle = $('<div class="jfilestyle ' + (_self.options.input?'jfilestyle-corner':'') + ' ' + (this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '') + '">'+html+'</div>');
+            var responsive_class = '';
+            if (_self.options.inputSize == 'responsive') {
+                responsive_class = 'responsive_jfilestyle';
+            }
+            _self.$elementjFilestyle = $('<div class="'+responsive_class+' jfilestyle ' + (_self.options.input?'jfilestyle-corner':'') + ' ' + (this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '') + '">'+html+'</div>');
             _self.$elementjFilestyle.find('.focus-jfilestyle')
                 .attr('tabindex', "0")
                 .keypress(function (e) {

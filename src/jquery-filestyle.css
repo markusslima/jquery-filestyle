@@ -86,3 +86,18 @@ div.jfilestyle .count-jfilestyle {
 	font-size: 12px;
 	vertical-align: middle;
 }
+
+.responsive_jfilestyle {
+    width: 100%;
+    display: table;
+}
+div.responsive_jfilestyle input {
+    display: table-cell;
+    position: relative;
+    width: 100%;
+}
+.responsive_jfilestyle span.focus-jfilestyle {
+    display: table-cell;
+    white-space: nowrap;
+    width: 1%;
+}
