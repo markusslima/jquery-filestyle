@@ -3,8 +3,8 @@
  * doc: http://markusslima.github.io/jquery-filestyle/
  * github: https://github.com/markusslima/jquery-filestyle
  *
- * Copyright (c) 2015 Markus Vinicius da Silva Lima
- * Version 1.5.1
+ * Copyright (c) 2017 Markus Vinicius da Silva Lima
+ * Version 2.0.0
  * Licensed under the MIT license.
  */
 (function ($) {
@@ -22,6 +22,7 @@
         clear: function () {
             this.$element.val('');
             this.$elementjFilestyle.find(':text').val('');
+            this.$elementjFilestyle.find('.count-jfilestyle').remove();
         },
 
         destroy: function () {
@@ -32,7 +33,7 @@
             this.$elementjFilestyle.remove();
         },
         
-        disabled : function(value) {
+        disabled : function (value) {
 			if (value === true) {
 				if (!this.options.disabled) {
 					this.$element.attr('disabled', 'true');
@@ -50,7 +51,7 @@
 			}
 		},
 		
-		buttonBefore : function(value) {
+		buttonBefore : function (value) {
 			if (value === true) {
 				if (!this.options.buttonBefore) {
 					this.options.buttonBefore = true;
@@ -78,10 +79,8 @@
             if (value === true) {
                 if (!this.options.input) {
                     this.options.input = true;
-                    this.$elementjFilestyle.prepend(this.htmlInput());
-
+                    this.$elementjFilestyle.find('label').before(this.htmlInput());
                     this.$elementjFilestyle.find('.count-jfilestyle').remove();
-
 					this.pushNameFiles();
                 }
             } else if (value === false) {
@@ -98,12 +97,12 @@
             }
         },
 
-        buttonText: function (value) {
+        text: function (value) {
             if (value !== undefined) {
-                this.options.buttonText = value;
-                this.$elementjFilestyle.find('label span').html(this.options.buttonText);
+                this.options.text = value;
+                this.$elementjFilestyle.find('label span').html(this.options.text);
             } else {
-                return this.options.buttonText;
+                return this.options.text;
             }
         },
         
@@ -173,7 +172,7 @@
             
             html = '<span class="focus-jfilestyle">'+
                      '<label for="'+id+'" ' + (_self.options.disabled ? 'disabled="true"' : '') + '>'+
-                       '<span>'+_self.options.buttonText+'</span>'+
+                       '<span>'+_self.options.text+'</span>'+
                      '</label>'+
                    '</span>';
             
@@ -183,7 +182,7 @@
 	            html = _self.htmlInput() + html;
             }
 
-            _self.$elementjFilestyle = $('<div class="jfilestyle ' + (_self.options.input?'jfilestyle-corner':'') + ' ' + (this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '') + '">'+html+'</div>');
+            _self.$elementjFilestyle = $('<div class="jfilestyle ' + (_self.options.input?'jfilestyle-corner':'') + ' ' + (this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '') + '"><div name="filedrag"></div>'+html+'</div>');
             _self.$elementjFilestyle.find('.focus-jfilestyle')
                 .attr('tabindex', "0")
                 .keypress(function (e) {
@@ -202,6 +201,13 @@
 			if (_self.options.disabled) {
 				_self.$element.attr('disabled', 'true');
 			}
+
+            _self.$elementjFilestyle.find('[name="filedrag"]').css({
+                position: 'absolute',
+                width: '100%',
+                height: _self.$elementjFilestyle.height()+'px',
+                'z-index': -1
+            });
 			
             // Getting input file value
             _self.$element.change(function () {
@@ -218,6 +224,8 @@
 				} else {
 					_self.$elementjFilestyle.find('.count-jfilestyle').remove();
 				}
+
+                _self.options.onChange(files);
             });
 
             // Check if browser is Firefox
@@ -228,6 +236,68 @@
                     return false;
                 });
             }
+
+            /** DRAG AND DROP EVENTS **/
+            $(document)
+                .on('dragover', function (e) {
+                    if (!_self.options.dragdrop) {
+                        return false;
+                    }
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $('[name="filedrag"]').css('z-index', '9');
+                })
+                .on('drop', function (e) {
+                    if (!_self.options.dragdrop) {
+                        return false;
+                    }
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $('[name="filedrag"]').css('z-index', '-1');
+                });
+
+            _self.$elementjFilestyle.find('[name="filedrag"]')
+                .on('dragover',
+                    function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                )
+                .on('dragenter',
+                    function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                )
+                .on('drop',
+                    function (e) {
+                        if (!_self.options.dragdrop) {
+                            return false;
+                        }
+                        if (e.originalEvent.dataTransfer && !_self.options.disabled) {
+                            if (e.originalEvent.dataTransfer.files.length) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                _self.$element[0].files = e.originalEvent.dataTransfer.files;
+                                var files = _self.pushNameFiles();
+                
+                                if (_self.options.input == false) {
+                                    if (_self.$elementjFilestyle.find('.count-jfilestyle').length == 0) {
+                                        _self.$elementjFilestyle.find('label').append(' <span class="count-jfilestyle">' + files.length + '</span>');
+                                    } else if (files.length == 0) {
+                                        _self.$elementjFilestyle.find('.count-jfilestyle').remove();
+                                    } else {
+                                        _self.$elementjFilestyle.find('.count-jfilestyle').html(files.length);
+                                    }
+                                } else {
+                                    _self.$elementjFilestyle.find('.count-jfilestyle').remove();
+                                }
+                                _self.options.onChange(files);
+                                $('[name="filedrag"]').css('z-index', '-1');
+                            }
+                        }
+                    }
+                );
         }
     };
 
@@ -260,12 +330,14 @@
     };
 
     $.fn.jfilestyle.defaults = {
-        'buttonText': 'Choose file',
+        'text': 'Choose file',
         'input': true,
         'disabled': false,
         'buttonBefore': false,
         'inputSize': '200px',
-        'placeholder': ''
+        'placeholder': '',
+        'dragdrop': true,
+        'onChange': function () {}
     };
 
     $.fn.jfilestyle.noConflict = function () {
@@ -278,12 +350,13 @@
         $('.jfilestyle').each(function () {
             var $this = $(this),
                 options = {
-                    'buttonText': $this.attr('data-buttonText'),
+                    'text': $this.attr('data-text'),
                     'input': $this.attr('data-input') === 'false' ? false : true,
                     'disabled': $this.attr('data-disabled') === 'true' ? true : false,
                     'buttonBefore': $this.attr('data-buttonBefore') === 'true' ? true : false,
                     'inputSize': $this.attr('data-inputSize'),
-                    'placeholder': $this.attr('data-placeholder')
+                    'placeholder': $this.attr('data-placeholder'),
+                    'dragdrop': $this.attr('data-dragdrop') === 'false' ? false : true
                 };
     
             $this.jfilestyle(options);

@@ -2,14 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>jQuery FileStyle 1.5.1 - jquery customization input html file</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.css">
+		<title>jQuery FileStyle 2.0.0 - jquery customization input html file</title>
 		<link href="../src/jquery-filestyle.css" rel="stylesheet" />
 		<style>
 			body {
 				font-family: sans-serif;
-				background: #dedede;
 			}
 			form label {
 				width: 150px;
@@ -26,14 +23,6 @@
 				Enviar
 			</button>
 		</form>
-        
-		<h2>With bootstrap and semantic ui icons</h2>
-        <form>
-            <label>Boostrap icon</label>
-			<input type="file" class="jfilestyle" data-buttonText="<span class='glyphicon glyphicon-folder-open'></span>  open"><br>
-            <label>Semantic UI icon</label>
-			<input type="file" class="jfilestyle" data-buttonText="<i class='alarm icon'></i>  open">
-        </form>
 		<h2>Options</h2>
 		<form>
 			<label for="input02">Custom button text</label>
@@ -114,15 +103,14 @@
 		<br>
 		<br>
 		<br>
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="../src/jquery-filestyle.js"></script>
 		<script type="text/javascript">
 			$('#input01').jfilestyle()
 
 			$('#input02').jfilestyle({
-				buttonText : 'My filestyle'
+				text : 'My filestyle',
+				dragdrop: false
 			});
 
 			$('#input03').jfilestyle({
