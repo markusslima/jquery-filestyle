@@ -32,7 +32,9 @@
 			<label for="input03">No text field</label>
 			<input type="file" id="input03">
 			<br>
-
+			<label for="input04">Event Change</label>
+			<input type="file" id="input04">
+			<br>
 			<label for="input06">Input size</label>
 			<input type="file" id="input06">
 			<br>
@@ -115,6 +117,11 @@
 
 			$('#input03').jfilestyle({
 				input : false
+			});
+			$('#input04').jfilestyle({
+				onChange : function (e) {
+					alert(e)
+				}
 			});
 
 			$('#input06').jfilestyle({
