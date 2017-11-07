@@ -32,6 +32,14 @@
                 .val('');
             this.$elementjFilestyle.remove();
         },
+
+        dragdrop : function (value) {
+            if (value === true || value === false) {
+                this.options.dragdrop = value;
+            } else {
+                return this.options.dragdrop;
+            }
+        },
         
         disabled : function (value) {
 			if (value === true) {
@@ -240,20 +248,18 @@
             /** DRAG AND DROP EVENTS **/
             $(document)
                 .on('dragover', function (e) {
-                    if (!_self.options.dragdrop) {
-                        return false;
-                    }
                     e.preventDefault();
                     e.stopPropagation();
-                    $('[name="filedrag"]').css('z-index', '9');
+                    if (!_self.options.dragdrop) {
+                        $('[name="filedrag"]').css('z-index', '9');
+                    }
                 })
                 .on('drop', function (e) {
-                    if (!_self.options.dragdrop) {
-                        return false;
-                    }
                     e.preventDefault();
                     e.stopPropagation();
-                    $('[name="filedrag"]').css('z-index', '-1');
+                    if (!_self.options.dragdrop) {
+                        $('[name="filedrag"]').css('z-index', '-1');
+                    }
                 });
 
             _self.$elementjFilestyle.find('[name="filedrag"]')
@@ -271,10 +277,7 @@
                 )
                 .on('drop',
                     function (e) {
-                        if (!_self.options.dragdrop) {
-                            return false;
-                        }
-                        if (e.originalEvent.dataTransfer && !_self.options.disabled) {
+                        if (e.originalEvent.dataTransfer && !_self.options.disabled && _self.options.dragdrop) {
                             if (e.originalEvent.dataTransfer.files.length) {
                                 e.preventDefault();
                                 e.stopPropagation();
@@ -292,7 +295,7 @@
                                 } else {
                                     _self.$elementjFilestyle.find('.count-jfilestyle').remove();
                                 }
-                                _self.options.onChange(files);
+
                                 $('[name="filedrag"]').css('z-index', '-1');
                             }
                         }
@@ -351,12 +354,12 @@
             var $this = $(this),
                 options = {
                     'text': $this.attr('data-text'),
-                    'input': $this.attr('data-input') === 'false' ? false : true,
-                    'disabled': $this.attr('data-disabled') === 'true' ? true : false,
-                    'buttonBefore': $this.attr('data-buttonBefore') === 'true' ? true : false,
+                    'input': $this.attr('data-input') !== 'false',
+                    'disabled': $this.attr('data-disabled') === 'true',
+                    'buttonBefore': $this.attr('data-buttonBefore') === 'true',
                     'inputSize': $this.attr('data-inputSize'),
                     'placeholder': $this.attr('data-placeholder'),
-                    'dragdrop': $this.attr('data-dragdrop') === 'false' ? false : true
+                    'dragdrop': $this.attr('data-dragdrop') !== 'false'
                 };
     
             $this.jfilestyle(options);
