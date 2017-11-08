@@ -56,45 +56,28 @@
 				     (adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
 			</section>
-        	<section>
-            	<div class="page-header">
-					<h1> Get jQuery Filestyle </h1>
-					<hr>
-				</div>
-				<div>
-					<a href="https://github.com/markusslima/jquery-filestyle" class="btn btn-secondary btn-lg"> <span class="oi oi-random"></span> Github </a>
-					<a href="https://github.com/markusslima/jquery-filestyle/archive/v2.0.0.zip" class="btn btn-primary btn-lg"> <span class="oi oi-data-transfer-download"></span> Download </a>
-				</div>
-			</section>
-			<section id="Description">
-				<div class="page-header">
-					<h1>Description</h1>
-				</div>
-				<p>The <strong>jQuery Filestyle</strong> this is a jQuery plugin for filestyle you forget to turn the input file's default browser. Customize as you like, it's yours now.</p>
-				<p>This plugin has an interesting way to present a form for sending files so attractive, while being simple and efficient.</p>
-			</section>
 
-			<section id="Requirements">
-				<div class="page-header">
-					<h1>Requirements</h1>
-				</div>
-				<p><a href="http://www.jquery.com" target="_blank">jQuery</a>.</p>
-			</section>
+			<!-- 
+			*****************************
+				Events
+			****************************** 
+			-->
 
-			<section id="Getstart">
+			<section id="Options">
 				<div class="page-header">
-					<h1>Get Start</h1>
+					<h1>Events</h1>
 				</div>
+				<h3>onChange</h3>
+				<div class="well well-small">
+					<h4>Execute function after change</h4>
 <pre><code class="language-javascript">
-&lt;head&gt;
-  &lt;link href="css/jquery-filestyle.min.js"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;input type="file" class="jfilestyle" data-input="false"&gt;
-  &lt;script src="js/jquery.js"&gt;&lt;/script&gt;
-  &lt;script src="js/jquery-filestyle.min.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
+$(<span class="str">":file"</span>).jfilestyle({
+   <span class="str">'onChange'</span>: function (files) {
+      console.log(files)
+   }
+});
 </code></pre>
+				</div>
 			</section>
 			<section>
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -107,8 +90,6 @@
 				<script>
 				     (adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
-				<br>
-				<br>
 			</section>
         </div>
         <footer>

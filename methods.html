@@ -56,59 +56,111 @@
 				     (adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
 			</section>
-        	<section>
-            	<div class="page-header">
-					<h1> Get jQuery Filestyle </h1>
-					<hr>
-				</div>
-				<div>
-					<a href="https://github.com/markusslima/jquery-filestyle" class="btn btn-secondary btn-lg"> <span class="oi oi-random"></span> Github </a>
-					<a href="https://github.com/markusslima/jquery-filestyle/archive/v2.0.0.zip" class="btn btn-primary btn-lg"> <span class="oi oi-data-transfer-download"></span> Download </a>
-				</div>
-			</section>
-			<section id="Description">
+			<!-- 
+			*****************************
+				Methods
+			****************************** 
+			-->
+			<section id="Methods">
 				<div class="page-header">
-					<h1>Description</h1>
+					<h1>Methods</h1>
 				</div>
-				<p>The <strong>jQuery Filestyle</strong> this is a jQuery plugin for filestyle you forget to turn the input file's default browser. Customize as you like, it's yours now.</p>
-				<p>This plugin has an interesting way to present a form for sending files so attractive, while being simple and efficient.</p>
-			</section>
-
-			<section id="Requirements">
-				<div class="page-header">
-					<h1>Requirements</h1>
-				</div>
-				<p><a href="http://www.jquery.com" target="_blank">jQuery</a>.</p>
-			</section>
-
-			<section id="Getstart">
-				<div class="page-header">
-					<h1>Get Start</h1>
-				</div>
+				<h3>dragdrop</h3>
+				<div class="well well-small">
+					<h4>- Set or get the dragdrop selected files.</h4>
+					<br>
+					<div class="alert alert-warning" role="alert">
+					  	When enabling the drag and drop event multiple file selection is enabled. That is, you can not limit the amount of uploaded files in your upload using drag and drop.
+					</div>
 <pre><code class="language-javascript">
-&lt;head&gt;
-  &lt;link href="css/jquery-filestyle.min.js"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;input type="file" class="jfilestyle" data-input="false"&gt;
-  &lt;script src="js/jquery.js"&gt;&lt;/script&gt;
-  &lt;script src="js/jquery-filestyle.min.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
+// get
+$(":file").jfilestyle('dragdrop');
+// set
+$(":file").jfilestyle({'dragdrop': false});
 </code></pre>
-			</section>
-			<section>
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle"
-				     style="display:block; text-align:center;"
-				     data-ad-format="fluid"
-				     data-ad-layout="in-article"
-				     data-ad-client="ca-pub-8894792596723869"
-				     data-ad-slot="9495429223"></ins>
-				<script>
-				     (adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-				<br>
-				<br>
+				</div>
+
+				<h3>clear</h3>
+				<div class="well well-small">
+					<h4>- Clear selected files.</h4>
+<pre><code class="language-javascript">
+$(":file").jfilestyle('clear');
+</code></pre>
+				</div>
+
+				<h3>destroy</h3>
+				<div class="well well-small">
+					<h4>- Destroy a filestyle completely.</h4>
+<pre><code class="language-javascript">
+$(":file").jfilestyle('destroy');
+</code></pre>
+				</div>
+
+				<h3>input</h3>
+				<div class="well well-small">
+					<h4>- Set or get the value of the input option.</h4>
+<pre><code class="language-javascript">
+// get
+$(":file").jfilestyle('input');
+// set
+$(":file").jfilestyle({'input': false});
+</code></pre>
+				</div>
+
+				<h3>buttonText</h3>
+				<div class="well well-small">
+					<h4>- Set or get the text of the button.</h4>
+<pre><code class="language-javascript">
+// get
+$(":file").jfilestyle('buttonText');
+// set
+$(":file").jfilestyle({'buttonText': 'My text'});
+</code></pre>
+				</div>
+                
+                <h3>disabled</h3>
+				<div class="well well-small">
+					<h4>- Set or get the disabled button.</h4>
+<pre><code class="language-javascript">
+// get
+$(":file").jfilestyle('disabled');
+// set
+$(":file").jfilestyle({'disabled': true});
+</code></pre>
+				</div>
+                
+                <h3>buttonBefore</h3>
+				<div class="well well-small">
+					<h4>- Set or get the buttonBefore.</h4>
+<pre><code class="language-javascript">
+// get
+$(":file").jfilestyle('buttonBefore');
+// set
+$(":file").jfilestyle({'buttonBefore': true});
+</code></pre>
+				</div>
+                
+                <h3>inputSize</h3>
+				<div class="well well-small">
+					<h4>- Set or get the inputSize.</h4>
+<pre><code class="language-javascript">
+// get
+$(":file").jfilestyle('inputSize');
+// set
+$(":file").jfilestyle({'inputSize': '400px'});
+</code></pre>
+				</div>
+
+				<h3>placeholder</h3>
+				<div class="well well-small">
+					<h4>- Set or get the placeholder.</h4>
+<pre><code class="language-javascript">
+// get
+$(":file").jfilestyle('placeholder');
+// set
+$(":file").jfilestyle({'placeholder': 'My text placeholder'});
+</code></pre>
+				</div>
 			</section>
         </div>
         <footer>

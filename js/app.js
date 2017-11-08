@@ -1,0 +1,28 @@
+$(document).ready(function () {
+	var menu = '<ul class="navbar-nav mr-auto mt-2 mt-lg-0">'
+			 + '	<li class="nav-item">'
+	  		 + '  		<div class="dropdown">'
+			 + '		  	<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
+			 + '		  	  	More plugins'
+			 + '		  	</button>'
+			 + '		  	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">'
+			 + '		  	  	<a class="dropdown-item" href="http://markusslima.github.io/bootstrap-filestyle/">Bootstrap FileStyle</a>'
+			 + '		  	  	<a class="dropdown-item" href="http://markusslima.github.io/easy-z-modal/">Easy-Z modal</a>'
+			 + '		  	</div>'
+			 + '		</div>'
+			 + '	</li>'
+			 + '	<li class="nav-item">'
+			 + '		<a class="nav-link" href="./index.html">Get Start</a>'
+			 + '	</li>'
+			 + '	<li class="nav-item">'
+			 + '		<a class="nav-link" href="./options.html">Options</a>'
+			 + '	</li>'
+			 + '	<li class="nav-item">'
+			 + '		<a class="nav-link" href="./methods.html">Methods</a>'
+			 + '	</li>'
+			 + '	<li class="nav-item">'
+			 + '		<a class="nav-link" href="./events.html">Events</a>'
+			 + '	</li>'
+  			 + '</ul>';
+  	$('#menu').html(menu);
+});
