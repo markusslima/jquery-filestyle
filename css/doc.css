@@ -1,13 +1,28 @@
 body {
 	padding: 59px 0 0 0;
 	font-size: 20px;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
+/*
+font-family: 'Indie Flower', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Space Mono', monospace;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+*/
 .bg-primary {
-    background-color: #0079e0!important;
+    background: rgba(111,0,128,1);
+	background: -moz-linear-gradient(left, rgba(111,0,128,1) 0%, rgba(111,0,128,1) 10%, rgba(68,0,255,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(111,0,128,1)), color-stop(10%, rgba(111,0,128,1)), color-stop(100%, rgba(68,0,255,1)));
+	background: -webkit-linear-gradient(left, rgba(111,0,128,1) 0%, rgba(111,0,128,1) 10%, rgba(68,0,255,1) 100%);
+	background: -o-linear-gradient(left, rgba(111,0,128,1) 0%, rgba(111,0,128,1) 10%, rgba(68,0,255,1) 100%);
+	background: -ms-linear-gradient(left, rgba(111,0,128,1) 0%, rgba(111,0,128,1) 10%, rgba(68,0,255,1) 100%);
+	background: linear-gradient(to right, rgba(111,0,128,1) 0%, rgba(111,0,128,1) 10%, rgba(68,0,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f0080', endColorstr='#4400ff', GradientType=1 );
 }
 .page-header h1 {
-	color: #0e4680;
+	color: #a229b5;
+	font-family: 'Quicksand', sans-serif;
 }
 
 .well.well-small {
@@ -15,9 +30,6 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     background: #f9f9f9;
-}
-.navbar {
-	padding: 15px 15px 20px;
 }
 .navbar-dark .navbar-nav .nav-link {
 	font-size: 16px;
@@ -28,6 +40,7 @@ body {
 }
 section {
 	padding: 0 0 60px;
+	font-family: 'Space Mono', monospace;
 }
 
 pre.prettyprint {
@@ -37,8 +50,7 @@ pre.prettyprint {
 	font-size: 15px;
 }
 header {
-	padding: 96px 20px;
-	border-bottom: 1px solid #8d54ca;
+	padding: 75px 20px 0px;
 }
 header canvas {
 	float: left;
