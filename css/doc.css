@@ -3,6 +3,19 @@ body {
 	font-size: 20px;
 	font-family: 'Montserrat', sans-serif;
 }
+p {
+	font-family: 'Space Mono', monospace;
+}
+h3 {
+	margin-top: 40px;
+	font-family: 'Space Mono', monospace;
+	font-size: 1.8em;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+.well {
+	font-size: 16px;
+}
 /*
 font-family: 'Indie Flower', cursive;
 font-family: 'Gloria Hallelujah', cursive;
@@ -22,7 +35,8 @@ font-family: 'Quicksand', sans-serif;
 }
 .page-header h1 {
 	color: #a229b5;
-	font-family: 'Quicksand', sans-serif;
+	/*font-family: 'Quicksand', sans-serif;*/
+	font-family: 'Gloria Hallelujah', cursive;
 }
 
 .well.well-small {
@@ -40,7 +54,6 @@ font-family: 'Quicksand', sans-serif;
 }
 section {
 	padding: 0 0 60px;
-	font-family: 'Space Mono', monospace;
 }
 
 pre.prettyprint {
@@ -57,24 +70,18 @@ header canvas {
     margin-top: -227px;
     margin-left: -20px;
 }
-header h1 {
-	font-size: 100px;
-	line-height: 90px;
-	margin-bottom: 30px;
-	color: #8d54ca;
-	font-weight: bold;
-}
-header h3 {
-	font-size: 40px;
-}
-header h4 {
-	font-size: 30px;
-	line-height: 30px;
-}
 footer {
-	padding: 30px 20px;
+	padding: 20px 0px 10px;
 	background: #333;
 	color: #fff;
+	font-size: 14px;
+	line-height: 
+}
+footer p {
+	margin-bottom: 5px;
+	letter-spacing: 1.5px;
+	font-family: 'Gloria Hallelujah', cursive;
+
 }
 footer a, footer a:hover, footer a:active, footer a:visited {
 	color: #fff;
@@ -83,56 +90,6 @@ footer a, footer a:hover, footer a:active, footer a:visited {
 	padding: 10px;
 	background: #ededed;
 	border-bottom: 1px solid #dedede;
-}
-
-@media (max-width: 480px) {
-	header h1 {
-		font-size: 60px;
-	}
-	header h3 {
-		font-size: 30px;
-	}
-	header h4 {
-		font-size: 20px;
-	}
-}
-@media (max-width: 979px) {
-	body {
-		padding-top: 0;
-	}
-	.navbar-fixed-top {
-		margin-bottom: 0;
-	}
-	header h1 {
-		font-size: 60px;
-	}
-	header h3 {
-		font-size: 35px;
-	}
-	header h4 {
-		font-size: 20px;
-	}
-}
-@media (max-width: 767px) {
-	body {
-		font-size: 13px;
-		padding: 0 10px;
-	}
-	header, .buttons-share {
-		margin: 0 -20px;
-	}
-	header h1 {
-		font-size: 50px;
-	}
-	header h3 {
-		font-size: 30px;
-	}
-	header h4 {
-		font-size: 15px;
-	}
-	footer {
-		margin: 0 -10px;
-	}
 }
 /* code color */
 .str {
@@ -143,7 +100,12 @@ footer a, footer a:hover, footer a:active, footer a:visited {
 	color: blue;
 }
 
-h3 small {
+h4 small {
 	font-size: 60%;
 	color: #808080;
+	float: right;
+}
+
+.jfilestyle * {
+	font-family: 
 }

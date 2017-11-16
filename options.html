@@ -28,38 +28,38 @@
     <body>
 		<header></header>
         <div class="container">
-        	<br>
-			<section>
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle"
-				     style="display:block; text-align:center;"
-				     data-ad-format="fluid"
-				     data-ad-layout="in-article"
-				     data-ad-client="ca-pub-8894792596723869"
-				     data-ad-slot="9495429223"></ins>
-				<script>
-				     (adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</section>
+        	<div class="row">
+				<div class="col">
 
-			<!-- 
-			*****************************
-				Options
-			****************************** 
-			-->
+					<!-- 
+					*****************************
+						Options
+					****************************** 
+					-->
 
-			<section id="Options">
-				<div class="page-header">
-					<h1>Options</h1>
-					<hr>
-				</div>
-				<h3>dragdrop</h3>
-				<div class="well well-small">
-					<h4>- Enables or disables drag and drop selected files. <small><strong>Type:</strong> Boolean, <strong>Default:</strong> true</small></h4>
-					<br>
-					<div class="alert alert-warning" role="alert">
-					  	When enabling the drag and drop event multiple file selection is enabled. That is, you can not limit the amount of uploaded files in your upload using drag and drop.
-					</div>
+					<section id="Options">
+						<div class="page-header">
+							<h1>Options</h1>
+							<hr>
+							<br>
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<ins class="adsbygoogle"
+							     style="display:block; text-align:center;"
+							     data-ad-format="fluid"
+							     data-ad-layout="in-article"
+							     data-ad-client="ca-pub-8894792596723869"
+							     data-ad-slot="9495429223"></ins>
+							<script>
+							     (adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+						</div>
+						<h3>dragdrop</h3>
+						<div class="well well-small">
+							<h4>- Enables or disables drag and drop selected files. <small><strong>Type:</strong> Boolean, <strong>Default:</strong> true</small></h4>
+							<br>
+							<div class="alert alert-warning" role="alert">
+							  	When enabling the drag and drop event multiple file selection is enabled. That is, you can not limit the amount of uploaded files in your upload using drag and drop.
+							</div>
 <pre><code class="language-javascript">
 // Via JavaScript:
 $(":file").jfilestyle({dragdrop: false});
@@ -67,15 +67,15 @@ $(":file").jfilestyle({dragdrop: false});
 // Via data attributes:
 &lt;input type="file" class="jfilestyle" data-dragdrop="false"&gt;
 </code></pre>
-					<p>Example:</p>
-					<form class="form">
-						<input type="file" class="jfilestyle" data-dragdrop="false">
-					</form>
-				</div>
+							<p>Example:</p>
+							<form class="form">
+								<input type="file" class="jfilestyle" data-dragdrop="false">
+							</form>
+						</div>
 
-				<h3>input</h3>
-				<div class="well well-small">
-					<h4>- Enables or disables the input text. <small><strong>Type:</strong> Boolean, <strong>Default:</strong> true</small></h4>
+						<h3>input</h3>
+						<div class="well well-small">
+							<h4>- Enables or disables the input text. <small><strong>Type:</strong> Boolean, <strong>Default:</strong> true</small></h4>
 <pre><code class="language-javascript">
 // Via JavaScript:
 $(":file").jfilestyle({input: false});
@@ -83,15 +83,15 @@ $(":file").jfilestyle({input: false});
 // Via data attributes:
 &lt;input type="file" class="jfilestyle" data-input="false"&gt;
 </code></pre>
-					<p>Example:</p>
-					<form class="form">
-						<input type="file" class="jfilestyle" data-input="false">
-					</form>
-				</div>
+							<p>Example:</p>
+							<form class="form">
+								<input type="file" class="jfilestyle" data-input="false">
+							</form>
+						</div>
 
-				<h3>text</h3>
-				<div class="well well-small">
-					<h4>- Changes the button text. <small><strong>Type:</strong> String, <strong>Default:</strong> "Choose file"</small></h4>
+						<h3>text</h3>
+						<div class="well well-small">
+							<h4>- Changes the button text. <small><strong>Type:</strong> String, <strong>Default:</strong> "Choose file"</small></h4>
 <pre><code class="language-javascript">
 // Via JavaScript:
 $(":file").jfilestyle({text: "Find file"});
@@ -99,15 +99,15 @@ $(":file").jfilestyle({text: "Find file"});
 // Via data attributes:
 &lt;input type="file" class="jfilestyle" data-text="Find file"&gt;
 </code></pre>
-					<p>Example:</p>
-					<form class="form-inline">
-						<input type="file" class="jfilestyle" data-text="Find file">
-					</form>
-				</div>
-                
-                <h3>disabled</h3>
-				<div class="well well-small">
-					<h4>- Disabled button. <small><strong>Type:</strong> Boolean, <strong>Default:</strong> false</small></h4>
+							<p>Example:</p>
+							<form class="form-inline">
+								<input type="file" class="jfilestyle" data-text="Find file">
+							</form>
+						</div>
+		                
+		                <h3>disabled</h3>
+						<div class="well well-small">
+							<h4>- Disabled button. <small><strong>Type:</strong> Boolean, <strong>Default:</strong> false</small></h4>
 <pre><code class="language-javascript">
 // Via JavaScript:
 $(":file").jfilestyle({disabled: true});
@@ -115,16 +115,30 @@ $(":file").jfilestyle({disabled: true});
 // Via data attributes:
 &lt;input type="file" class="jfilestyle" data-disabled="true"&gt;
 </code></pre>
-					<p>Example:</p>
-					<form class="form-inline">
-						<input type="file" class="jfilestyle" data-disabled="true">
-					</form>
-				</div>
-                
-                
-                <h3>buttonBefore</h3>
-				<div class="well well-small">
-					<h4>- Button before. <small><strong>Type:</strong> Boolean, <strong>Default:</strong> false</small></h4>
+							<p>Example:</p>
+							<form class="form-inline">
+								<input type="file" class="jfilestyle" data-disabled="true">
+							</form>
+						</div>
+
+						<br>
+						<section>
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<ins class="adsbygoogle"
+							     style="display:block; text-align:center;"
+							     data-ad-format="fluid"
+							     data-ad-layout="in-article"
+							     data-ad-client="ca-pub-8894792596723869"
+							     data-ad-slot="9495429223"></ins>
+							<script>
+							     (adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+						</section>
+		                
+		                
+		                <h3>buttonBefore</h3>
+						<div class="well well-small">
+							<h4>- Button before. <small><strong>Type:</strong> Boolean, <strong>Default:</strong> false</small></h4>
 <pre><code class="language-javascript">
 // Via JavaScript:
 $(":file").jfilestyle({buttonBefore: true});
@@ -132,16 +146,16 @@ $(":file").jfilestyle({buttonBefore: true});
 // Via data attributes:
 &lt;input type="file" class="jfilestyle" data-buttonBefore="true"&gt;
 </code></pre>
-					<p>Example:</p>
-					<form class="form-inline">
-						<input type="file" class="jfilestyle" data-buttonBefore="true">
-					</form>
-				</div>
+							<p>Example:</p>
+							<form class="form-inline">
+								<input type="file" class="jfilestyle" data-buttonBefore="true">
+							</form>
+						</div>
                 
 			
-				<h3>inputSize</h3>
-				<div class="well well-small">
-					<h4>- Change width of the input. Use units of measurement css.<small> <strong>Type:</strong> String, <strong>Default:</strong> "200px"</small></h4>
+						<h3>inputSize</h3>
+						<div class="well well-small">
+							<h4>- Change width of the input. Use units of measurement css.<small> <strong>Type:</strong> String, <strong>Default:</strong> "200px"</small></h4>
 <pre><code class="language-javascript">
 // Via JavaScript:
 $(":file").jfilestyle({inputSize: "400px"});
@@ -149,15 +163,15 @@ $(":file").jfilestyle({inputSize: "400px"});
 // Via data attributes:
 &lt;input type="file" class="jfilestyle" data-inputSize="400px"&gt;
 </code></pre>
-					<p>Example:</p>
-					<form class="form-inline">
-						<input type="file" class="jfilestyle" data-inputSize="400px">
-					</form>
-				</div>
-			
-				<h3>placeholder</h3>
-				<div class="well well-small">
-					<h4>- Set input placeholder. <small><strong>Type:</strong> String, <strong>Default:</strong> ""</small></h4>
+							<p>Example:</p>
+							<form class="form-inline">
+								<input type="file" class="jfilestyle" data-inputSize="400px">
+							</form>
+						</div>
+					
+						<h3>placeholder</h3>
+						<div class="well well-small">
+							<h4>- Set input placeholder. <small><strong>Type:</strong> String, <strong>Default:</strong> ""</small></h4>
 <pre><code class="language-javascript">
 // Via JavaScript:
 $(":file").jfilestyle({placeholder: "My place holder"});
@@ -165,18 +179,18 @@ $(":file").jfilestyle({placeholder: "My place holder"});
 // Via data attributes:
 &lt;input type="file" class="jfilestyle" data-placeholder="My place holder"&gt;
 </code></pre>
-					<p>Example:</p>
-					<form class="form-inline">
-						<input type="file" class="jfilestyle" data-placeholder="My place holder">
-					</form>
-				</div>
-			</section>
-            
-            <section id="Methods">
-				<div class="page-header">
-					<h1>Using external icons</h1>
-				</div>
-                <div class="well well-small">
+							<p>Example:</p>
+							<form class="form-inline">
+								<input type="file" class="jfilestyle" data-placeholder="My place holder">
+							</form>
+						</div>
+					</section>
+		            
+		            <section id="Methods">
+						<div class="page-header">
+							<h1>Using external icons</h1>
+						</div>
+		                <div class="well well-small">
 <pre><code class="language-javascript">
 // Via JavaScript:
 $(":file").jfilestyle({text: "&lt;span class='glyphicon glyphicon-folder-open'&gt;&lt;/span&gt;"});
@@ -184,36 +198,28 @@ $(":file").jfilestyle({text: "&lt;span class='glyphicon glyphicon-folder-open'&g
 // Via data attributes:
 &lt;input type="file" class="jfilestyle" data-text="&lt;span class='glyphicon glyphicon-folder-open'&gt;&lt;/span&gt;"&gt;
 </code></pre>
-					<p>Example:</p>
-					<form class="form-inline">
-						<input type="file" class="jfilestyle" data-text="<span class='oi oi-folder'></span> icon">
-					</form>
-				</div>
-            </section>
-			<section>
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle"
-				     style="display:block; text-align:center;"
-				     data-ad-format="fluid"
-				     data-ad-layout="in-article"
-				     data-ad-client="ca-pub-8894792596723869"
-				     data-ad-slot="9495429223"></ins>
-				<script>
-				     (adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</section>
+							<p>Example:</p>
+							<form class="form-inline">
+								<input type="file" class="jfilestyle" data-text="<span class='oi oi-folder'></span> icon">
+							</form>
+						</div>
+		            </section>
+					<section>
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<ins class="adsbygoogle"
+						     style="display:block; text-align:center;"
+						     data-ad-format="fluid"
+						     data-ad-layout="in-article"
+						     data-ad-client="ca-pub-8894792596723869"
+						     data-ad-slot="9495429223"></ins>
+						<script>
+						     (adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</section>
+        		</div>
+        	</div>
         </div>
-        <footer>
-        	<div class="container">
-				<div class="row">
-					<div class="span12 text-center">
-						<p>Designed and built by <strong><a href="https://github.com/markusslima">Markus Lima</a>.</strong></p>
-						<h4>:) Here to thank all the people who have contributed and will contribute to this project.</h4>
-						<p>Code licensed under <strong>MIT</strong>.</p>
-					</div>
-				</div>
-			</div>
-        </footer>
+        <footer></footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
