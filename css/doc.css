@@ -63,7 +63,7 @@ pre.prettyprint {
 	font-size: 15px;
 }
 header {
-	padding: 75px 20px 0px;
+	padding: 75px 20px;
 }
 header canvas {
 	float: left;
