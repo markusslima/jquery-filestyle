@@ -46,29 +46,21 @@ font-family: 'Quicksand', sans-serif;
     background: #f9f9f9;
 }
 .navbar-dark .navbar-nav .nav-link {
-	font-size: 16px;
-	color: rgba(255,255,255,.7)
-}
-.navbar-dark .navbar-nav .nav-link:hover {
-	color: rgba(255,255,255,1)
+	padding: 5px 14px;
 }
 section {
 	padding: 0 0 60px;
 }
-
-pre.prettyprint {
-	background: #fff;
-	padding: 10px 5px;
-	border: 1px solid #d8d8d8;
-	font-size: 15px;
-}
 header {
 	padding: 75px 20px;
 }
-header canvas {
-	float: left;
-    margin-top: -227px;
-    margin-left: -20px;
+header img {
+	width: 64%;
+}
+@media only screen and (max-width: 990px) {
+    header img {
+		width: 80%;
+    }
 }
 footer {
 	padding: 20px 0px 10px;
@@ -83,29 +75,10 @@ footer p {
 	font-family: 'Gloria Hallelujah', cursive;
 
 }
-footer a, footer a:hover, footer a:active, footer a:visited {
-	color: #fff;
-}
-.buttons-share {
-	padding: 10px;
-	background: #ededed;
-	border-bottom: 1px solid #dedede;
-}
-/* code color */
-.str {
-	color: green;
-}
 
-.tag {
-	color: blue;
-}
-
-h4 small {
-	font-size: 60%;
+h3 div {
+	font-size: 45%;
 	color: #808080;
-	float: right;
-}
-
-.jfilestyle * {
-	font-family: 
+	font-weight: normal;
+	line-height: 40px;
 }
