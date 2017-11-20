@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>jQuery FileStyle 2.0.0 - jquery customization input html file</title>
-		<link href="../src/jquery-filestyle.css" rel="stylesheet" />
+		<link href="../src/jquery-filestyle.min.css" rel="stylesheet" />
 		<style>
 			body {
 				font-family: sans-serif;
@@ -60,12 +60,20 @@
 			</button>
 			<br>
 
+			<label for="input10">Set theme Blue</label>
+			<input type="file" id="input10">
+			<button id="theme" type="button">
+				Blue theme
+			</button>
+			<br>
+
 			<label for="input12">Destroy</label>
 			<input type="file" id="input12">
 			<button id="destroy" type="button">
 				Destroy
 			</button>
 			<br>
+
 
 			<label for="input13">Multiple</label>
 			<input type="file" id="input13" multiple="multiple">
@@ -101,12 +109,30 @@
 			<input type="file" class="jfilestyle" data-buttonText="Open">
 			<br>
 		</form>
+
+		<h2>Themes</h2>
+		<form>
+			<input type="file" class="jfilestyle" data-theme="blue" data-text="blue">
+			<br>
+			<input type="file" class="jfilestyle" data-theme="green" data-text="green">
+			<br>
+			<input type="file" class="jfilestyle" data-theme="yellow" data-text="yellow">
+			<br>
+			<input type="file" class="jfilestyle" data-theme="black" data-text="black">
+			<br>
+			<input type="file" class="jfilestyle" data-theme="red" data-text="red">
+			<br>
+			<input type="file" class="jfilestyle" data-theme="purple" data-text="purple">
+			<br>
+			<input type="file" class="jfilestyle" data-theme="asphalt" data-text="asphalt">
+			<br>
+		</form>
 		<br>
 		<br>
 		<br>
 		<br>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script type="text/javascript" src="../src/jquery-filestyle.js"></script>
+		<script type="text/javascript" src="../src/jquery-filestyle.min.js"></script>
 		<script type="text/javascript">
 			$('#input01').jfilestyle()
 
@@ -147,6 +173,20 @@
 					fs.jfilestyle('input', true);
 			});
 
+			$('#input10').jfilestyle();
+
+			$('#theme').click(function() {
+				var fs = $('#input10');
+				if (fs.jfilestyle('theme') == 'default') {
+					$(this).html('Default theme');
+					fs.jfilestyle('theme', 'blue');
+				} else {
+					$(this).html('Blue theme');
+					fs.jfilestyle('theme', 'default');
+				}
+			});
+			
+
 			$('#input12').jfilestyle({
 				theme : 'red'
 			});
@@ -167,6 +207,5 @@
 
 			$('.test').jfilestyle();
 		</script>
-
-	</body>
+s	</body>
 </html>

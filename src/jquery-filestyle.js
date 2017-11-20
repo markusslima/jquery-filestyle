@@ -4,7 +4,7 @@
  * github: https://github.com/markusslima/jquery-filestyle
  *
  * Copyright (c) 2017 Markus Vinicius da Silva Lima
- * Version 2.0.0
+ * Version 2.1.0
  * Licensed under the MIT license.
  */
 (function ($) {
@@ -113,7 +113,18 @@
                 return this.options.text;
             }
         },
-        
+
+        theme: function (value) {
+            if (value !== undefined) {
+                console.log(this.$elementjFilestyle.attr('class').replace(/.*(jfilestyle-theme-.*).*/, '$1'));
+                this.$elementjFilestyle.removeClass(this.$elementjFilestyle.attr('class').replace(/.*(jfilestyle-theme-.*).*/, '$1'));
+                this.options.theme = value;
+                this.$elementjFilestyle.addClass('jfilestyle-theme-'+this.options.theme);
+            } else {
+                return this.options.theme;
+            }
+        },
+
         inputSize: function (value) {
             if (value !== undefined) {
                 this.options.inputSize = value;
@@ -190,7 +201,13 @@
 	            html = _self.htmlInput() + html;
             }
 
-            _self.$elementjFilestyle = $('<div class="jfilestyle ' + (_self.options.input?'jfilestyle-corner':'') + ' ' + (this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '') + '"><div name="filedrag"></div>'+html+'</div>');
+            _self.$elementjFilestyle = $('<div class="jfilestyle '
+                +(_self.options.input?'jfilestyle-corner':'')+' '
+                +(this.options.buttonBefore ? ' jfilestyle-buttonbefore' : '')+' '
+                +(_self.options.theme?'jfilestyle-theme-'+_self.options.theme:'')+'">'
+                +'<div name="filedrag"></div>'
+                +html
+                +'</div>');
             _self.$elementjFilestyle.find('.focus-jfilestyle')
                 .attr('tabindex', "0")
                 .keypress(function (e) {
@@ -340,6 +357,7 @@
         'inputSize': '200px',
         'placeholder': '',
         'dragdrop': true,
+        'theme': 'default',
         'onChange': function () {}
     };
 
@@ -359,6 +377,7 @@
                     'buttonBefore': $this.attr('data-buttonBefore') === 'true',
                     'inputSize': $this.attr('data-inputSize'),
                     'placeholder': $this.attr('data-placeholder'),
+                    'theme': $this.attr('data-theme'),
                     'dragdrop': $this.attr('data-dragdrop') !== 'false'
                 };
     

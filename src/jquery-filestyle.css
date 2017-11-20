@@ -4,7 +4,7 @@
  * github: https://github.com/markusslima/jquery-filestyle
  *
  * Copyright (c) 2017 Markus Vinicius da Silva Lima
- * Version 2.0.0
+ * Version 2.1.0
  * Licensed under the MIT license.
  */
 .jfilestyle {
@@ -72,4 +72,50 @@ div.jfilestyle .count-jfilestyle {
 	padding: 1px 5px;
 	font-size: 12px;
 	vertical-align: middle;
+}
+
+/** 
+ * THEMES
+ */
+div.jfilestyle.jfilestyle-theme-blue input {/**/}
+div.jfilestyle.jfilestyle-theme-blue label {
+	border-color: #438eff;
+	background: #438eff;
+	color: #fff;
+}
+div.jfilestyle.jfilestyle-theme-green input {/**/}
+div.jfilestyle.jfilestyle-theme-green label {
+	border-color: #18a063;
+	background: #18a063;
+	color: #fff;
+}
+div.jfilestyle.jfilestyle-theme-yellow input {/**/}
+div.jfilestyle.jfilestyle-theme-yellow label {
+	border-color: #e8c821;
+	background: #e8c821;
+	color: #fff;
+}
+div.jfilestyle.jfilestyle-theme-black input {/**/}
+div.jfilestyle.jfilestyle-theme-black label {
+	border-color: #424242;
+	background: #424242;
+	color: #fff;
+}
+div.jfilestyle.jfilestyle-theme-red input {/**/}
+div.jfilestyle.jfilestyle-theme-red label {
+	border-color: #f33f3f;
+	background: #f33f3f;
+	color: #fff;
+}
+div.jfilestyle.jfilestyle-theme-purple input {/**/}
+div.jfilestyle.jfilestyle-theme-purple label {
+	border-color: #873aff;
+	background: #873aff;
+	color: #fff;
+}
+div.jfilestyle.jfilestyle-theme-asphalt input {/**/}
+div.jfilestyle.jfilestyle-theme-asphalt label {
+	border-color: #435673;
+	background: #435673;
+	color: #fff;
 }
