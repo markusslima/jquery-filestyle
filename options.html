@@ -50,28 +50,33 @@
 						<div class="well well-small">
 							<h4>- Choose theme <b>blue</b>, <b>green</b>, <b>yellow</b>, <b>red</b>, <b>black</b>, <b>purple</b> and <b>asphalt</b>.</h4>
 							<br>
-<pre><code class="language-javascript">// Via JavaScript:
-$(":file").jfilestyle({theme: "blue"});
-
-// Via data attributes:
-&lt;input type="file" class="jfilestyle" data-theme="blue"&gt;
+							<b>Via JavaScript</b>
+<pre><code class="language-javascript">$(":file").jfilestyle({theme: "blue"});
+</code></pre>
+							<b>Via Data attributes</b>
+<pre><code class="language-html">&lt;input type="file" class="jfilestyle" data-theme="blue"&gt;
 </code></pre>
 							<br>
 							<p>Example:</p>
 							<form class="form">
-								<input type="file" class="jfilestyle" data-theme="blue" data-text="blue">
-								<br>
-								<input type="file" class="jfilestyle" data-theme="green" data-text="green">
-								<br>
-								<input type="file" class="jfilestyle" data-theme="yellow" data-text="yellow">
-								<br>
-								<input type="file" class="jfilestyle" data-theme="red" data-text="red">
-								<br>
-								<input type="file" class="jfilestyle" data-theme="black" data-text="black">
-								<br>
-								<input type="file" class="jfilestyle" data-theme="purple" data-text="purple">
-								<br>
-								<input type="file" class="jfilestyle" data-theme="asphalt" data-text="asphalt">
+								<div class="row">
+									<div class="col">
+										<input type="file" class="jfilestyle" data-theme="blue" data-text="blue">
+										<br>
+										<input type="file" class="jfilestyle" data-theme="green" data-text="green">
+										<br>
+										<input type="file" class="jfilestyle" data-theme="yellow" data-text="yellow">
+										<br>
+										<input type="file" class="jfilestyle" data-theme="red" data-text="red">
+									</div>
+									<div class="col">
+										<input type="file" class="jfilestyle" data-theme="black" data-text="black">
+										<br>
+										<input type="file" class="jfilestyle" data-theme="purple" data-text="purple">
+										<br>
+										<input type="file" class="jfilestyle" data-theme="asphalt" data-text="asphalt">
+									</div>
+								</div>
 							</form>
 						</div>
 
@@ -82,11 +87,12 @@ $(":file").jfilestyle({theme: "blue"});
 							<div class="alert alert-warning" role="alert">
 							  	When enabling the drag and drop event multiple file selection is enabled. That is, you can not limit the amount of uploaded files in your upload using drag and drop.
 							</div>
-<pre><code class="language-javascript">// Via JavaScript:
-$(":file").jfilestyle({dragdrop: false});
-
-// Via data attributes:
-&lt;input type="file" class="jfilestyle" data-dragdrop="false"&gt;
+							<br>
+							<b>Via JavaScript</b>
+<pre><code class="language-javascript">$(":file").jfilestyle({dragdrop: false});
+</code></pre>
+							<b>Via Data attributes</b>
+<pre><code class="language-html">&lt;input type="file" class="jfilestyle" data-dragdrop="false"&gt;
 </code></pre>
 							<br>
 							<p>Example:</p>
@@ -98,11 +104,12 @@ $(":file").jfilestyle({dragdrop: false});
 						<h3>input <div><strong>Type:</strong> Boolean, <strong>Default:</strong> true</div></h3>
 						<div class="well well-small">
 							<h4>- Enables or disables the input text.</h4>
-<pre><code class="language-javascript">// Via JavaScript:
-$(":file").jfilestyle({input: false});
-
-// Via data attributes:
-&lt;input type="file" class="jfilestyle" data-input="false"&gt;
+							<br>
+							<b>Via JavaScript</b>
+<pre><code class="language-javascript">$(":file").jfilestyle({input: false});
+</code></pre>
+							<b>Via Data attributes</b>
+<pre><code class="language-html">&lt;input type="file" class="jfilestyle" data-input="false"&gt;
 </code></pre>
 							<br>
 							<p>Example:</p>
@@ -114,11 +121,12 @@ $(":file").jfilestyle({input: false});
 						<h3>text <div><strong>Type:</strong> String, <strong>Default:</strong> "Choose file"</div></h3>
 						<div class="well well-small">
 							<h4>- Changes the button text.</h4>
-<pre><code class="language-javascript">// Via JavaScript:
-$(":file").jfilestyle({text: "Find file"});
-
-// Via data attributes:
-&lt;input type="file" class="jfilestyle" data-text="Find file"&gt;
+							<br>
+							<b>Via JavaScript</b>
+<pre><code class="language-javascript">$(":file").jfilestyle({text: "Find file"});
+</code></pre>
+							<b>Via Data attributes</b>
+<pre><code class="language-html">&lt;input type="file" class="jfilestyle" data-text="Find file"&gt;
 </code></pre>
 							<br>
 							<p>Example:</p>
@@ -130,11 +138,12 @@ $(":file").jfilestyle({text: "Find file"});
 		                <h3>disabled <div><strong>Type:</strong> Boolean, <strong>Default:</strong> false</div></h3>
 						<div class="well well-small">
 							<h4>- Disabled button.</h4>
-<pre><code class="language-javascript">// Via JavaScript:
-$(":file").jfilestyle({disabled: true});
-
-// Via data attributes:
-&lt;input type="file" class="jfilestyle" data-disabled="true"&gt;
+							<br>
+							<b>Via JavaScript</b>
+<pre><code class="language-javascript">$(":file").jfilestyle({disabled: true});
+</code></pre>
+							<b>Via Data attributes</b>
+<pre><code class="language-html">&lt;input type="file" class="jfilestyle" data-disabled="true"&gt;
 </code></pre>
 							<br>
 							<p>Example:</p>
@@ -161,11 +170,12 @@ $(":file").jfilestyle({disabled: true});
 		                <h3>buttonBefore <div><strong>Type:</strong> Boolean, <strong>Default:</strong> false</div></h3>
 						<div class="well well-small">
 							<h4>- Button before.</h4>
-<pre><code class="language-javascript">// Via JavaScript:
-$(":file").jfilestyle({buttonBefore: true});
-
-// Via data attributes:
-&lt;input type="file" class="jfilestyle" data-buttonBefore="true"&gt;
+							<br>
+							<b>Via JavaScript</b>
+<pre><code class="language-javascript">$(":file").jfilestyle({buttonBefore: true});
+</code></pre>
+							<b>Via Data attributes</b>
+<pre><code class="language-html">&lt;input type="file" class="jfilestyle" data-buttonBefore="true"&gt;
 </code></pre>
 							<br>
 							<p>Example:</p>
@@ -178,11 +188,12 @@ $(":file").jfilestyle({buttonBefore: true});
 						<h3>inputSize <div><strong>Type:</strong> String, <strong>Default:</strong> "200px"</div></h3>
 						<div class="well well-small">
 							<h4>- Change width of the input. Use units of measurement css.</h4>
-<pre><code class="language-javascript">// Via JavaScript:
-$(":file").jfilestyle({inputSize: "400px"});
-
-// Via data attributes:
-&lt;input type="file" class="jfilestyle" data-inputSize="400px"&gt;
+							<br>
+							<b>Via JavaScript</b>
+<pre><code class="language-javascript">$(":file").jfilestyle({inputSize: "400px"});
+</code></pre>
+							<b>Via Data attributes</b>
+<pre><code class="language-html">&lt;input type="file" class="jfilestyle" data-inputSize="400px"&gt;
 </code></pre>
 							<br>
 							<p>Example:</p>
@@ -194,11 +205,12 @@ $(":file").jfilestyle({inputSize: "400px"});
 						<h3>placeholder <div><strong>Type:</strong> String, <strong>Default:</strong> ""</div></h3>
 						<div class="well well-small">
 							<h4>- Set input placeholder.</h4>
-<pre><code class="language-javascript">// Via JavaScript:
-$(":file").jfilestyle({placeholder: "My place holder"});
-
-// Via data attributes:
-&lt;input type="file" class="jfilestyle" data-placeholder="My place holder"&gt;
+							<br>
+							<b>Via JavaScript</b>
+<pre><code class="language-javascript">$(":file").jfilestyle({placeholder: "My place holder"});
+</code></pre>
+							<b>Via Data attributes</b>
+<pre><code class="language-html">&lt;input type="file" class="jfilestyle" data-placeholder="My place holder"&gt;
 </code></pre>
 							<br>
 							<p>Example:</p>
